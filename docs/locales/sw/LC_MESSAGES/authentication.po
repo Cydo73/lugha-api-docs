@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: sw\n"
+"Language-Team: sw <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../authentication.md:1
+msgid "Authentication"
+msgstr "Uthibitishaji"
+
+#: ../../authentication.md:3
+msgid ""
+"Every endpoint except `/health` needs an API key. Send it in the "
+"`Authorization` header as a bearer token."
+msgstr ""
+"Kila endpoint isipokuwa `/health` inahitaji API key. Itume kwenye header "
+"`Authorization` kama tokeni ya Bearer."
+
+#: ../../authentication.md:9
+msgid ""
+"The public demo key is `lugha_demo_key`. It is shared and rate limited, "
+"so use it for trying things out and nothing else."
+msgstr ""
+"API key ya majaribio ya umma ni `lugha_demo_key`. Inashirikiwa na ina "
+"kikomo cha matumizi, kwa hiyo itumie kwa majaribio pekee na si kwa "
+"madhumuni mengine."
+
+#: ../../authentication.md:11
+msgid "Keep your key out of your code"
+msgstr "Usiweke key yako ndani ya code yako"
+
+#: ../../authentication.md:13
+msgid "Read the key from an environment variable."
+msgstr "Soma key kutoka kwenye environment variable."
+
+#: ../../authentication.md:21
+msgid "Three rules keep keys safe."
+msgstr "Sheria tatu husaidia kuweka keys salama."
+
+#: ../../authentication.md:23
+msgid ""
+"Never commit a key to source control. Add any file that holds a key, such"
+" as `.env`, to `.gitignore`."
+msgstr ""
+"Usiwahi kuweka key kwenye source control. Ongeza faili yoyote iliyo na "
+"key, kama `.env`, kwenye `.gitignore`."
+
+#: ../../authentication.md:24
+msgid ""
+"Never put a key in code that runs in a browser or a mobile app. Anyone "
+"can read it. Call the API from your own server instead."
+msgstr ""
+"Usiwahi kuweka key kwenye code inayotumika kwenye browser au mobile app. "
+"Mtu yeyote anaweza kuisoma. Badala yake, ita API kutoka kwenye server "
+"yako mwenyewe."
+
+#: ../../authentication.md:25
+msgid ""
+"Never paste a key into a support message. Send the `request_id` from the "
+"error instead."
+msgstr ""
+"Usiwahi kubandika key kwenye ujumbe wa support. Badala yake, tuma "
+"`request_id` kutoka kwenye error."
+
+#: ../../authentication.md:27
+msgid "Rotate keys without downtime"
+msgstr "Badilisha keys bila kusababisha huduma kusimama"
+
+#: ../../authentication.md:29
+msgid "The service accepts more than one key at a time. To rotate:"
+msgstr "Huduma inakubali zaidi ya key moja kwa wakati mmoja. Ili kubadilisha key:"
+
+#: ../../authentication.md:31
+msgid "Add the new key alongside the old one."
+msgstr "Ongeza key mpya pamoja na key ya zamani."
+
+#: ../../authentication.md:32
+msgid "Deploy your applications with the new key."
+msgstr "Deploy applications zako ukitumia key mpya."
+
+#: ../../authentication.md:33
+msgid "Remove the old key once nothing uses it."
+msgstr "Ondoa key ya zamani baada ya kuhakikisha hakuna kinachoitumia."
+
+#: ../../authentication.md:35
+msgid "If a key leaks, remove it straight away and issue a new one."
+msgstr ""
+"Ikiwa key imevuja, iondoe mara moja na utoe key mpya."
+
+#: ../../authentication.md:37
+msgid "Authentication errors"
+msgstr "Makosa ya uthibitishaji"
+
+#: ../../authentication.md:39
+msgid "Both authentication failures return status `401`."
+msgstr "Makwazo yote mawili ya uthibitishaji yanarudisha status `401`."
+
+#: ../../authentication.md
+msgid "`type`"
+msgstr "`type`"
+
+#: ../../authentication.md
+msgid "Cause"
+msgstr "Sababu"
+
+#: ../../authentication.md
+msgid "What to do"
+msgstr "Cha kufanya"
+
+#: ../../authentication.md
+msgid "`authentication_required`"
+msgstr "`authentication_required`"
+
+#: ../../authentication.md
+msgid "The `Authorization` header is missing, or it does not start with `Bearer`."
+msgstr ""
+"Header ya `Authorization` haipo, au haianzi na `Bearer`."
+
+#: ../../authentication.md
+msgid "Add the header in the format above."
+msgstr "Ongeza header kwa muundo ulioonyeshwa hapo juu."
+
+#: ../../authentication.md
+msgid "`invalid_api_key`"
+msgstr "`invalid_api_key`"
+
+#: ../../authentication.md
+msgid "The header is well formed but the key is not recognised."
+msgstr "Header imeundwa kwa usahihi lakini key haitambuliki."
+
+#: ../../authentication.md
+msgid "Check for typos, extra spaces and expired keys."
+msgstr ""
+"Angalia makosa ya kuandika, nafasi za ziada na keys zilizokwisha muda."
+
+#: ../../authentication.md:46
+msgid "Do not retry a `401`. The same request will fail the same way."
+msgstr ""
+"Usijaribu tena ombi linalorudisha `401`. Ombi hilo hilo litashindwa kwa "
+"njia hiyo hiyo."

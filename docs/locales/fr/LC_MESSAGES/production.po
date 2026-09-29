@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../production.md:1
+msgid "Production checklist"
+msgstr "Liste de contrôle de production"
+
+#: ../../production.md:3
+msgid ""
+"Work through this list before you ship. Each item comes from something "
+"that goes wrong in real integrations."
+msgstr ""
+"Parcourez cette liste avant la mise en production. Chaque élément "
+"correspond à un problème qui peut survenir dans des intégrations réelles."
+
+#: ../../production.md:5
+msgid "Before you deploy"
+msgstr "Avant le déploiement"
+
+#: ../../production.md:7
+msgid ""
+"Store API keys in environment variables or a secrets manager, never in "
+"source code."
+msgstr ""
+"Stockez les clés API dans des variables d’environnement ou un gestionnaire "
+"de secrets, jamais dans le code source."
+
+#: ../../production.md:8
+msgid ""
+"Never expose a key in a browser or mobile app. Call the API from your own"
+" server."
+msgstr ""
+"N’exposez jamais une clé dans un navigateur ou une application mobile. "
+"Appelez l’API depuis votre propre serveur."
+
+#: ../../production.md:9
+msgid ""
+"Set a timeout on every request. Without one, a stalled connection can "
+"hang your application."
+msgstr ""
+"Définissez un délai d’expiration pour chaque requête. Sans cela, une "
+"connexion bloquée peut suspendre votre application."
+
+#: ../../production.md:10
+msgid ""
+"Retry `429` and `500` responses and network failures. Do not retry other "
+"`4xx` errors."
+msgstr ""
+"Réessayez les réponses `429` et `500` ainsi que les erreurs réseau. Ne "
+"réessayez pas les autres erreurs `4xx`."
+
+#: ../../production.md:11
+msgid ""
+"Wait for `Retry-After` on a `429`, and use exponential backoff with a "
+"little random jitter for everything else."
+msgstr ""
+"Attendez `Retry-After` après un `429` et utilisez une temporisation "
+"exponentielle avec une légère variation aléatoire pour tout le reste."
+
+#: ../../production.md:12
+msgid "Log the `request_id` of every failed request so support can find it."
+msgstr ""
+"Consignez le `request_id` de chaque requête échouée afin que le support "
+"puisse la retrouver."
+
+#: ../../production.md:13
+msgid "Do not log prompts or responses. They may contain personal data."
+msgstr ""
+"Ne consignez pas les prompts ni les réponses. Ils peuvent contenir des "
+"données personnelles."
+
+#: ../../production.md:14
+msgid "Check `finish_reason`. A value of `length` means the response was cut off."
+msgstr ""
+"Vérifiez `finish_reason`. Une valeur `length` signifie que la réponse a "
+"été tronquée."
+
+#: ../../production.md:15
+msgid "Record `usage.total_tokens` so you can see how much each feature uses."
+msgstr ""
+"Enregistrez `usage.total_tokens` afin de voir combien chaque fonctionnalité "
+"utilise de jetons."
+
+#: ../../production.md:16
+msgid ""
+"Choose the `region` on purpose and confirm the `X-Data-Region` header "
+"matches what you expect."
+msgstr ""
+"Choisissez la `region` intentionnellement et vérifiez que l’en-tête "
+"`X-Data-Region` correspond à ce que vous attendez."
+
+#: ../../production.md:17
+msgid ""
+"Handle `model_not_found`. Do not assume a model ID will exist forever. "
+"List models at startup if you can."
+msgstr ""
+"Gérez `model_not_found`. Ne supposez pas qu’un ID de modèle existera "
+"indéfiniment. Listez les modèles au démarrage si possible."
+
+#: ../../production.md:18
+msgid "Monitor how long requests take, and alert when they get slower."
+msgstr ""
+"Surveillez la durée des requêtes et déclenchez une alerte lorsqu’elles "
+"ralentissent."
+
+#: ../../production.md:20
+msgid "A client that follows the list"
+msgstr "Un client qui suit la liste"
+
+#: ../../production.md:22
+msgid ""
+"The repository includes a small Python client that covers the timeout, "
+"retry, backoff and logging items. This is its request method."
+msgstr ""
+"Le dépôt contient un petit client Python qui couvre les délais "
+"d’expiration, les nouvelles tentatives, la temporisation et la journalisation. "
+"Voici sa méthode de requête."
+
+#: ../../production.md:29
+msgid "A few choices worth pointing out:"
+msgstr "Quelques choix qui méritent d’être soulignés :"
+
+#: ../../production.md:31
+msgid ""
+"It gives up straight away if the server asks for a wait longer than "
+"`max_retry_wait`. A request that blocks for a minute is usually worse "
+"than a clear failure."
+msgstr ""
+"Il abandonne immédiatement si le serveur demande d’attendre plus longtemps "
+"que `max_retry_wait`. Une requête qui reste bloquée pendant une minute est "
+"généralement pire qu’un échec explicite."
+
+#: ../../production.md:32
+msgid ""
+"It logs the status, error type and request ID. It never logs the prompt "
+"or the response."
+msgstr ""
+"Il consigne le statut, le type d’erreur et l’ID de la requête. Il ne "
+"consigne jamais le prompt ni la réponse."
+
+#: ../../production.md:33
+msgid ""
+"It only retries statuses in `RETRYABLE_STATUS`. A `400` will not succeed "
+"on a second attempt, so the client raises it at once."
+msgstr ""
+"Il ne réessaie que les statuts présents dans `RETRYABLE_STATUS`. Un `400` "
+"ne réussira pas lors d’une seconde tentative, le client le signale donc "
+"immédiatement."

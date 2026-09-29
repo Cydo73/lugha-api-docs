@@ -1,0 +1,426 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: 2026-09-29\n"
+"Last-Translator: \n"
+"Language: pt\n"
+"Language-Team: Portuguese\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../api-reference.md:3
+msgid "API reference"
+msgstr "Referência da API"
+
+#: ../../api-reference.md:5
+msgid ""
+"This page is generated from the OpenAPI file, which is exported from the "
+"service code. When the API changes, this page changes with it."
+msgstr ""
+"Esta página é gerada a partir do arquivo OpenAPI, que é exportado do código "
+"do serviço. Quando a API muda, esta página também é atualizada."
+
+#: ../../api-reference.md:7
+msgid ""
+"All endpoints except `/health` need an API key. See "
+"[Authentication](authentication.md)."
+msgstr ""
+"Todos os endpoints, exceto `/health`, precisam de uma chave de API. Consulte "
+"[Autenticação](authentication.md)."
+
+#: ../../api-reference.md:9
+msgid "POST /v1/generate"
+msgstr "POST /v1/generate"
+
+#: ../../api-reference.md:11
+msgid "**Generate text**"
+msgstr "**Gerar texto**"
+
+#: ../../api-reference.md:13
+msgid ""
+"Sends a prompt to a model and returns the response. The response includes"
+" an X-Data-Region header that echoes the region that processed the "
+"request."
+msgstr ""
+"Envia um prompt para um modelo e retorna a resposta. A resposta inclui um "
+"cabeçalho X-Data-Region que indica a região que processou a requisição."
+
+#: ../../api-reference.md:15 ../../api-reference.md:74
+#: ../../api-reference.md:104
+msgid "Requires an API key."
+msgstr "Requer uma chave de API."
+
+#: ../../api-reference.md:17 ../../api-reference.md:106
+msgid "Request body"
+msgstr "Corpo da requisição"
+
+#: ../../api-reference.md
+msgid "Field"
+msgstr "Campo"
+
+#: ../../api-reference.md
+msgid "Type"
+msgstr "Tipo"
+
+#: ../../api-reference.md
+msgid "Required"
+msgstr "Obrigatório"
+
+#: ../../api-reference.md
+msgid "Description"
+msgstr "Descrição"
+
+#: ../../api-reference.md
+msgid "`model`"
+msgstr "`model`"
+
+#: ../../api-reference.md
+msgid "string"
+msgstr "string"
+
+#: ../../api-reference.md
+msgid "Yes"
+msgstr "Sim"
+
+#: ../../api-reference.md
+msgid "ID of the model to use. List them with GET /v1/models."
+msgstr "ID do modelo a ser usado. Liste-os com GET /v1/models."
+
+#: ../../api-reference.md
+msgid "`prompt`"
+msgstr "`prompt`"
+
+#: ../../api-reference.md
+msgid "The text you want the model to respond to. Length 1 to 4000 characters."
+msgstr ""
+"O texto ao qual você deseja que o modelo responda. Comprimento de 1 a 4000 "
+"caracteres."
+
+#: ../../api-reference.md
+msgid "`language`"
+msgstr "`language`"
+
+#: ../../api-reference.md
+msgid "No"
+msgstr "Não"
+
+#: ../../api-reference.md
+msgid ""
+"Language code of the prompt. Each model supports a different set. "
+"Default: `\"en\"`."
+msgstr ""
+"Código de idioma do prompt. Cada modelo oferece suporte a um conjunto "
+"diferente. Padrão: `\"en\"`."
+
+#: ../../api-reference.md
+msgid "`max_tokens`"
+msgstr "`max_tokens`"
+
+#: ../../api-reference.md
+msgid "integer"
+msgstr "integer"
+
+#: ../../api-reference.md
+msgid ""
+"Upper limit on tokens in the response. Cannot exceed the model's "
+"max_output_tokens. Default: `64`. Minimum 1."
+msgstr ""
+"Limite máximo de tokens na resposta. Não pode exceder "
+"`max_output_tokens` do modelo. Padrão: `64`. Mínimo: 1."
+
+#: ../../api-reference.md
+msgid "`region`"
+msgstr "`region`"
+
+#: ../../api-reference.md
+msgid "Where the request is processed: ke, ug, ma or mu. Default: `\"ke\"`."
+msgstr ""
+"Onde a requisição é processada: ke, ug, ma ou mu. Padrão: `\"ke\"`."
+
+#: ../../api-reference.md:27 ../../api-reference.md:112
+msgid "Example request body:"
+msgstr "Exemplo de corpo da requisição:"
+
+#: ../../api-reference.md:39 ../../api-reference.md:76
+#: ../../api-reference.md:120 ../../api-reference.md:145
+msgid "Responses"
+msgstr "Respostas"
+
+#: ../../api-reference.md
+msgid "Status"
+msgstr "Status"
+
+#: ../../api-reference.md
+msgid "Meaning"
+msgstr "Significado"
+
+#: ../../api-reference.md
+msgid "200"
+msgstr "200"
+
+#: ../../api-reference.md
+msgid "The generated text and token usage."
+msgstr "O texto gerado e o uso de tokens."
+
+#: ../../api-reference.md
+msgid "400"
+msgstr "400"
+
+#: ../../api-reference.md
+msgid "The request was invalid. Check the message field."
+msgstr "A requisição é inválida. Verifique o campo message."
+
+#: ../../api-reference.md
+msgid "401"
+msgstr "401"
+
+#: ../../api-reference.md
+msgid "The API key is missing or not valid."
+msgstr "A chave de API está ausente ou não é válida."
+
+#: ../../api-reference.md
+msgid "404"
+msgstr "404"
+
+#: ../../api-reference.md
+msgid "The model or endpoint does not exist."
+msgstr "O modelo ou endpoint não existe."
+
+#: ../../api-reference.md
+msgid "429"
+msgstr "429"
+
+#: ../../api-reference.md
+msgid ""
+"Rate limit exceeded. Wait for the number of seconds in the Retry-After "
+"header."
+msgstr ""
+"Limite de requisições excedido. Aguarde o número de segundos indicado no "
+"cabeçalho Retry-After."
+
+#: ../../api-reference.md:49 ../../api-reference.md:84
+#: ../../api-reference.md:129 ../../api-reference.md:151
+msgid "A `200` response has these fields."
+msgstr "Uma resposta `200` contém estes campos."
+
+#: ../../api-reference.md
+msgid "`id`"
+msgstr "`id`"
+
+#: ../../api-reference.md
+msgid "Unique ID for this generation."
+msgstr "ID exclusivo para esta geração."
+
+#: ../../api-reference.md
+msgid "The model that handled the request."
+msgstr "O modelo que processou a requisição."
+
+#: ../../api-reference.md
+msgid "The language code you sent."
+msgstr "O código de idioma que você enviou."
+
+#: ../../api-reference.md
+msgid "`output`"
+msgstr "`output`"
+
+#: ../../api-reference.md
+msgid "The generated text."
+msgstr "O texto gerado."
+
+#: ../../api-reference.md
+msgid "`finish_reason`"
+msgstr "`finish_reason`"
+
+#: ../../api-reference.md
+msgid "string, one of `stop`, `length`"
+msgstr "string, uma das opções `stop`, `length`"
+
+#: ../../api-reference.md
+msgid ""
+"stop means the response ended naturally. length means it was cut off at "
+"max_tokens."
+msgstr ""
+"`stop` significa que a resposta terminou naturalmente. `length` significa "
+"que ela foi interrompida em `max_tokens`."
+
+#: ../../api-reference.md
+msgid "`usage`"
+msgstr "`usage`"
+
+#: ../../api-reference.md
+msgid "Usage object"
+msgstr "Objeto de uso"
+
+#: ../../api-reference.md
+msgid "Token counts for this request."
+msgstr "Contagem de tokens para esta requisição."
+
+#: ../../api-reference.md:60
+msgid "The `usage` object has these fields."
+msgstr "O objeto `usage` contém estes campos."
+
+#: ../../api-reference.md
+msgid "`prompt_tokens`"
+msgstr "`prompt_tokens`"
+
+#: ../../api-reference.md
+msgid "Tokens in the prompt."
+msgstr "Tokens no prompt."
+
+#: ../../api-reference.md
+msgid "`completion_tokens`"
+msgstr "`completion_tokens`"
+
+#: ../../api-reference.md
+msgid "Tokens in the response."
+msgstr "Tokens na resposta."
+
+#: ../../api-reference.md
+msgid "`total_tokens`"
+msgstr "`total_tokens`"
+
+#: ../../api-reference.md
+msgid "prompt_tokens plus completion_tokens."
+msgstr "`prompt_tokens` mais `completion_tokens`."
+
+#: ../../api-reference.md:68 ../../api-reference.md:98
+#: ../../api-reference.md:137
+msgid "Failures use the standard error body described in [Errors](errors.md)."
+msgstr ""
+"As falhas usam o corpo de erro padrão descrito em [Erros](errors.md)."
+
+#: ../../api-reference.md:70
+msgid "GET /v1/models"
+msgstr "GET /v1/models"
+
+#: ../../api-reference.md:72
+msgid "**List models**"
+msgstr "**Listar modelos**"
+
+#: ../../api-reference.md
+msgid "The models you can use."
+msgstr "Os modelos que você pode usar."
+
+#: ../../api-reference.md
+msgid "`data`"
+msgstr "`data`"
+
+#: ../../api-reference.md
+msgid "array of ModelInfo object"
+msgstr "array de objetos ModelInfo"
+
+#: ../../api-reference.md
+msgid "The available models."
+msgstr "Os modelos disponíveis."
+
+#: ../../api-reference.md:90
+msgid "Each item in `data` has these fields."
+msgstr "Cada item em `data` contém estes campos."
+
+#: ../../api-reference.md
+msgid "Model ID. Pass this as model when you generate text."
+msgstr "ID do modelo. Passe-o como `model` ao gerar texto."
+
+#: ../../api-reference.md
+msgid "`max_output_tokens`"
+msgstr "`max_output_tokens`"
+
+#: ../../api-reference.md
+msgid "Largest max_tokens value this model accepts."
+msgstr "Maior valor de `max_tokens` aceito por este modelo."
+
+#: ../../api-reference.md
+msgid "`languages`"
+msgstr "`languages`"
+
+#: ../../api-reference.md
+msgid "array of string"
+msgstr "array de strings"
+
+#: ../../api-reference.md
+msgid "Language codes this model accepts."
+msgstr "Códigos de idioma aceitos por este modelo."
+
+#: ../../api-reference.md:100
+msgid "POST /v1/tokens/count"
+msgstr "POST /v1/tokens/count"
+
+#: ../../api-reference.md:102
+msgid "**Count tokens**"
+msgstr "**Contar tokens**"
+
+#: ../../api-reference.md
+msgid "`text`"
+msgstr "`text`"
+
+#: ../../api-reference.md
+msgid "Text to count tokens for. Length 1 to 20000 characters."
+msgstr ""
+"Texto para o qual contar os tokens. Comprimento de 1 a 20000 caracteres."
+
+#: ../../api-reference.md
+msgid "The token count for the text."
+msgstr "A contagem de tokens do texto."
+
+#: ../../api-reference.md
+msgid "`token_count`"
+msgstr "`token_count`"
+
+#: ../../api-reference.md
+msgid "Number of tokens in the text."
+msgstr "Número de tokens no texto."
+
+#: ../../api-reference.md
+msgid "`word_count`"
+msgstr "`word_count`"
+
+#: ../../api-reference.md
+msgid "Number of words in the text, split on whitespace."
+msgstr "Número de palavras no texto, separadas por espaços em branco."
+
+#: ../../api-reference.md
+msgid "`tokens_per_word`"
+msgstr "`tokens_per_word`"
+
+#: ../../api-reference.md
+msgid "number"
+msgstr "number"
+
+#: ../../api-reference.md
+msgid "token_count divided by word_count, rounded to two decimals."
+msgstr "`token_count` dividido por `word_count`, arredondado para duas casas decimais."
+
+#: ../../api-reference.md:139
+msgid "GET /health"
+msgstr "GET /health"
+
+#: ../../api-reference.md:141
+msgid "**Check service health**"
+msgstr "**Verificar a saúde do serviço**"
+
+#: ../../api-reference.md:143
+msgid "No API key needed."
+msgstr "Nenhuma chave de API é necessária."
+
+#: ../../api-reference.md
+msgid "The service is running."
+msgstr "O serviço está em execução."
+
+#: ../../api-reference.md
+msgid "`status`"
+msgstr "`status`"
+
+#: ../../api-reference.md
+msgid "Always ok when the service is running."
+msgstr "Sempre `ok` quando o serviço está em execução."

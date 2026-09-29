@@ -1,0 +1,318 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt\n"
+"Language-Team: pt <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../errors.md:1
+msgid "Errors"
+msgstr "Erros"
+
+#: ../../errors.md:3
+msgid ""
+"When a request fails, the response body always has the same shape, "
+"whatever went wrong."
+msgstr ""
+"Quando uma solicitação falha, o corpo da resposta sempre tem a mesma "
+"estrutura, independentemente do que tenha dado errado."
+
+#: ../../errors.md ../../errors.md:15
+msgid "`type`"
+msgstr "`type`"
+
+#: ../../errors.md:16
+msgid "A machine readable category. Branch your code on this value."
+msgstr "Uma categoria legível por máquina. Use este valor para direcionar o seu código."
+
+#: ../../errors.md:18
+msgid "`message`"
+msgstr "`message`"
+
+#: ../../errors.md:19
+msgid ""
+"A plain explanation for humans. Show it in logs, but do not parse it. The"
+" wording can change."
+msgstr ""
+"Uma explicação simples para pessoas. Mostre-a nos logs, mas não a analise "
+"automaticamente. O texto pode mudar."
+
+#: ../../errors.md:21
+msgid "`request_id`"
+msgstr "`request_id`"
+
+#: ../../errors.md:22
+msgid ""
+"The ID of this request. It is also in the `X-Request-ID` response header."
+" Quote it when you contact support, and never send your API key."
+msgstr ""
+"O ID desta solicitação. Ele também está no cabeçalho de resposta "
+"`X-Request-ID`. Informe-o ao entrar em contato com o suporte e nunca envie "
+"sua chave de API."
+
+#: ../../errors.md:24
+msgid "Error types"
+msgstr "Tipos de erro"
+
+#: ../../errors.md
+msgid "Status"
+msgstr "Status"
+
+#: ../../errors.md
+msgid "What it means"
+msgstr "O que significa"
+
+#: ../../errors.md
+msgid "Retry?"
+msgstr "Tentar novamente?"
+
+#: ../../errors.md
+msgid "`authentication_required`"
+msgstr "`authentication_required`"
+
+#: ../../errors.md
+msgid "401"
+msgstr "401"
+
+#: ../../errors.md
+msgid "The `Authorization` header is missing or malformed."
+msgstr "O cabeçalho `Authorization` está ausente ou malformado."
+
+#: ../../errors.md
+msgid "No"
+msgstr "Não"
+
+#: ../../errors.md
+msgid "`invalid_api_key`"
+msgstr "`invalid_api_key`"
+
+#: ../../errors.md
+msgid "The key is not recognised."
+msgstr "A chave não é reconhecida."
+
+#: ../../errors.md
+msgid "`invalid_request`"
+msgstr "`invalid_request`"
+
+#: ../../errors.md
+msgid "400"
+msgstr "400"
+
+#: ../../errors.md
+msgid "A field is missing or has a bad value. The message names the field."
+msgstr "Um campo está ausente ou contém um valor inválido. A mensagem identifica o campo."
+
+#: ../../errors.md
+msgid "`unsupported_language`"
+msgstr "`unsupported_language`"
+
+#: ../../errors.md
+msgid ""
+"The model does not support this language. The message lists the ones it "
+"does."
+msgstr ""
+"O modelo não oferece suporte a este idioma. A mensagem lista os idiomas "
+"que ele oferece suporte."
+
+#: ../../errors.md
+msgid "`unsupported_region`"
+msgstr "`unsupported_region`"
+
+#: ../../errors.md
+msgid "The region is not one of `ke`, `ug`, `ma` or `mu`."
+msgstr "A região não é uma das opções `ke`, `ug`, `ma` ou `mu`."
+
+#: ../../errors.md
+msgid "`model_not_found`"
+msgstr "`model_not_found`"
+
+#: ../../errors.md
+msgid "404"
+msgstr "404"
+
+#: ../../errors.md
+msgid "There is no model with that ID. List models with `GET /v1/models`."
+msgstr "Não existe nenhum modelo com esse ID. Liste os modelos com `GET /v1/models`."
+
+#: ../../errors.md
+msgid "`not_found`"
+msgstr "`not_found`"
+
+#: ../../errors.md
+msgid "There is no endpoint at that path."
+msgstr "Não existe nenhum endpoint nesse caminho."
+
+#: ../../errors.md
+msgid "`method_not_allowed`"
+msgstr "`method_not_allowed`"
+
+#: ../../errors.md
+msgid "405"
+msgstr "405"
+
+#: ../../errors.md
+msgid "The endpoint does not accept that HTTP method."
+msgstr "O endpoint não aceita esse método HTTP."
+
+#: ../../errors.md
+msgid "`rate_limit_exceeded`"
+msgstr "`rate_limit_exceeded`"
+
+#: ../../errors.md
+msgid "429"
+msgstr "429"
+
+#: ../../errors.md
+msgid "You used all your requests for this minute."
+msgstr "Você usou todas as suas solicitações deste minuto."
+
+#: ../../errors.md
+msgid "Yes, after `Retry-After`"
+msgstr "Sim, após `Retry-After`"
+
+#: ../../errors.md
+msgid "`internal_error`"
+msgstr "`internal_error`"
+
+#: ../../errors.md
+msgid "500"
+msgstr "500"
+
+#: ../../errors.md
+msgid "Something went wrong on the service side."
+msgstr "Algo deu errado no lado do serviço."
+
+#: ../../errors.md
+msgid "Yes, with backoff"
+msgstr "Sim, com espera progressiva"
+
+#: ../../errors.md:39
+msgid ""
+"A `400`, `401`, `404` or `405` means the request itself needs to change. "
+"Sending it again unchanged will fail again."
+msgstr ""
+"Um `400`, `401`, `404` ou `405` significa que a própria solicitação precisa "
+"ser alterada. Enviá-la novamente sem alterações falhará novamente."
+
+#: ../../errors.md:41
+msgid "Examples"
+msgstr "Exemplos"
+
+#: ../../errors.md:43
+msgid "A model that does not support the language you asked for:"
+msgstr "Um modelo que não oferece suporte ao idioma solicitado:"
+
+#: ../../errors.md:55
+msgid ""
+"The fix is in the message. Use a model that supports the language, or "
+"choose one of the listed languages."
+msgstr ""
+"A solução está na mensagem. Use um modelo que ofereça suporte ao idioma "
+"ou escolha um dos idiomas listados."
+
+#: ../../errors.md:57
+msgid "Rate limits"
+msgstr "Limites de taxa"
+
+#: ../../errors.md:59
+msgid ""
+"Each API key can make 10 requests per minute. The count resets at the "
+"start of each minute. Every response tells you where you stand."
+msgstr ""
+"Cada chave de API pode fazer 10 solicitações por minuto. A contagem é "
+"reiniciada no início de cada minuto. Cada resposta informa como está o seu uso."
+
+#: ../../errors.md
+msgid "Header"
+msgstr "Cabeçalho"
+
+#: ../../errors.md
+msgid "Meaning"
+msgstr "Significado"
+
+#: ../../errors.md
+msgid "`X-RateLimit-Limit`"
+msgstr "`X-RateLimit-Limit`"
+
+#: ../../errors.md
+msgid "Requests allowed per minute."
+msgstr "Solicitações permitidas por minuto."
+
+#: ../../errors.md
+msgid "`X-RateLimit-Remaining`"
+msgstr "`X-RateLimit-Remaining`"
+
+#: ../../errors.md
+msgid "Requests left in the current minute."
+msgstr "Solicitações restantes no minuto atual."
+
+#: ../../errors.md
+msgid "`X-RateLimit-Reset`"
+msgstr "`X-RateLimit-Reset`"
+
+#: ../../errors.md
+msgid "Seconds until the count resets."
+msgstr "Segundos até a contagem ser reiniciada."
+
+#: ../../errors.md:67
+msgid ""
+"When you use up your requests, the next one returns status `429` with a "
+"`Retry-After` header."
+msgstr ""
+"Quando você esgota suas solicitações, a próxima retorna o status `429` com "
+"um cabeçalho `Retry-After`."
+
+#: ../../errors.md:88
+msgid ""
+"Wait for the number of seconds in `Retry-After`, then send the request "
+"again. Retrying straight away only uses up more of your allowance."
+msgstr ""
+"Aguarde o número de segundos indicado em `Retry-After` e depois envie a "
+"solicitação novamente. Tentar novamente imediatamente apenas consome mais "
+"do seu limite."
+
+#: ../../errors.md:90
+msgid ""
+"If you see `429` often, slow your requests down. Watch `X-RateLimit-"
+"Remaining` and pause before it reaches zero."
+msgstr ""
+"Se você vir `429` com frequência, reduza a velocidade das suas solicitações. "
+"Monitore `X-RateLimit-Remaining` e faça uma pausa antes que chegue a zero."
+
+#: ../../errors.md:92
+msgid "What to retry"
+msgstr "O que tentar novamente"
+
+#: ../../errors.md:94
+msgid ""
+"Retry `429` after the `Retry-After` delay. Retry `500` and network "
+"failures with exponential backoff, which means waiting a little longer "
+"after each failed attempt. Never retry the other errors."
+msgstr ""
+"Tente novamente `429` após o atraso indicado por `Retry-After`. Tente "
+"novamente `500` e falhas de rede usando espera exponencial, o que significa "
+"aguardar um pouco mais após cada tentativa malsucedida. Nunca tente novamente "
+"os outros erros."
+
+#: ../../errors.md:96
+msgid ""
+"The [production checklist](production.md) includes a client that does all"
+" of this."
+msgstr ""
+"A [lista de verificação de produção](production.md) inclui um cliente que "
+"faz tudo isso."

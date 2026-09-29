@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=n%100==0 ? 0 : n%100==1 ? 1 : n%100==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../authentication.md:1
+msgid "Authentication"
+msgstr "المصادقة"
+
+#: ../../authentication.md:3
+msgid ""
+"Every endpoint except `/health` needs an API key. Send it in the "
+"`Authorization` header as a bearer token."
+msgstr ""
+"تحتاج جميع نقاط النهاية باستثناء `/health` إلى مفتاح API. أرسله في "
+"رأس `Authorization` باعتباره رمز Bearer."
+
+#: ../../authentication.md:9
+msgid ""
+"The public demo key is `lugha_demo_key`. It is shared and rate limited, "
+"so use it for trying things out and nothing else."
+msgstr ""
+"مفتاح العرض التجريبي العام هو `lugha_demo_key`. وهو مشترك ويخضع لحدود "
+"معدل الاستخدام، لذا استخدمه للتجربة فقط وليس لأي غرض آخر."
+
+#: ../../authentication.md:11
+msgid "Keep your key out of your code"
+msgstr "أبقِ مفتاحك خارج التعليمات البرمجية"
+
+#: ../../authentication.md:13
+msgid "Read the key from an environment variable."
+msgstr "اقرأ المفتاح من متغير بيئة."
+
+#: ../../authentication.md:21
+msgid "Three rules keep keys safe."
+msgstr "تساعد ثلاث قواعد في الحفاظ على أمان المفاتيح."
+
+#: ../../authentication.md:23
+msgid ""
+"Never commit a key to source control. Add any file that holds a key, such"
+" as `.env`, to `.gitignore`."
+msgstr ""
+"لا تضع مفتاحًا أبدًا في نظام التحكم بالمصدر. أضف أي ملف يحتوي على مفتاح، "
+"مثل `.env`، إلى `.gitignore`."
+
+#: ../../authentication.md:24
+msgid ""
+"Never put a key in code that runs in a browser or a mobile app. Anyone "
+"can read it. Call the API from your own server instead."
+msgstr ""
+"لا تضع مفتاحًا أبدًا في تعليمات برمجية تعمل في متصفح أو تطبيق للهواتف "
+"المحمولة. يمكن لأي شخص قراءته. استدعِ واجهة API من خادمك الخاص بدلًا من ذلك."
+
+#: ../../authentication.md:25
+msgid ""
+"Never paste a key into a support message. Send the `request_id` from the "
+"error instead."
+msgstr ""
+"لا تلصق مفتاحًا أبدًا في رسالة إلى الدعم. أرسل `request_id` الموجود في "
+"الخطأ بدلًا من ذلك."
+
+#: ../../authentication.md:27
+msgid "Rotate keys without downtime"
+msgstr "قم بتدوير المفاتيح دون توقف الخدمة"
+
+#: ../../authentication.md:29
+msgid "The service accepts more than one key at a time. To rotate:"
+msgstr "تقبل الخدمة أكثر من مفتاح واحد في الوقت نفسه. لإجراء عملية التدوير:"
+
+#: ../../authentication.md:31
+msgid "Add the new key alongside the old one."
+msgstr "أضف المفتاح الجديد إلى جانب المفتاح القديم."
+
+#: ../../authentication.md:32
+msgid "Deploy your applications with the new key."
+msgstr "انشر تطبيقاتك باستخدام المفتاح الجديد."
+
+#: ../../authentication.md:33
+msgid "Remove the old key once nothing uses it."
+msgstr "أزل المفتاح القديم بعد التأكد من عدم استخدام أي شيء له."
+
+#: ../../authentication.md:35
+msgid "If a key leaks, remove it straight away and issue a new one."
+msgstr ""
+"إذا تسرّب أحد المفاتيح، فأزله فورًا وأصدر مفتاحًا جديدًا."
+
+#: ../../authentication.md:37
+msgid "Authentication errors"
+msgstr "أخطاء المصادقة"
+
+#: ../../authentication.md:39
+msgid "Both authentication failures return status `401`."
+msgstr "تعيد حالتا فشل المصادقة كلتاهما الحالة `401`."
+
+#: ../../authentication.md
+msgid "`type`"
+msgstr "`type`"
+
+#: ../../authentication.md
+msgid "Cause"
+msgstr "السبب"
+
+#: ../../authentication.md
+msgid "What to do"
+msgstr "ما يجب فعله"
+
+#: ../../authentication.md
+msgid "`authentication_required`"
+msgstr "`authentication_required`"
+
+#: ../../authentication.md
+msgid "The `Authorization` header is missing, or it does not start with `Bearer`."
+msgstr ""
+"رأس `Authorization` مفقود أو لا يبدأ بـ `Bearer`."
+
+#: ../../authentication.md
+msgid "Add the header in the format above."
+msgstr "أضف الرأس بالتنسيق الموضح أعلاه."
+
+#: ../../authentication.md
+msgid "`invalid_api_key`"
+msgstr "`invalid_api_key`"
+
+#: ../../authentication.md
+msgid "The header is well formed but the key is not recognised."
+msgstr "الرأس مُنسّق بشكل صحيح، لكن المفتاح غير معروف."
+
+#: ../../authentication.md
+msgid "Check for typos, extra spaces and expired keys."
+msgstr ""
+"تحقق من الأخطاء الإملائية والمسافات الزائدة والمفاتيح منتهية الصلاحية."
+
+#: ../../authentication.md:46
+msgid "Do not retry a `401`. The same request will fail the same way."
+msgstr ""
+"لا تعاود محاولة طلب يعيد `401`. سيفشل الطلب نفسه بالطريقة نفسها."

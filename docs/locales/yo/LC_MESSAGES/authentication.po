@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: yo\n"
+"Language-Team: yo <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../authentication.md:1
+msgid "Authentication"
+msgstr "Ìmúdájú"
+
+#: ../../authentication.md:3
+msgid ""
+"Every endpoint except `/health` needs an API key. Send it in the "
+"`Authorization` header as a bearer token."
+msgstr ""
+"Gbogbo endpoint yàtọ̀ sí `/health` nílò API key. Rán an sí header "
+"`Authorization` gẹ́gẹ́ bí Bearer token."
+
+#: ../../authentication.md:9
+msgid ""
+"The public demo key is `lugha_demo_key`. It is shared and rate limited, "
+"so use it for trying things out and nothing else."
+msgstr ""
+"Demo key gbogbogbòò ni `lugha_demo_key`. A ń pín in, ó sì ní ààlà lórí "
+"iye ìlò, nítorí náà lo ó fún ìdánwò nìkan, kì í ṣe fún ohun mìíràn."
+
+#: ../../authentication.md:11
+msgid "Keep your key out of your code"
+msgstr "Má fi key rẹ sínú code rẹ"
+
+#: ../../authentication.md:13
+msgid "Read the key from an environment variable."
+msgstr "Ka key náà láti environment variable."
+
+#: ../../authentication.md:21
+msgid "Three rules keep keys safe."
+msgstr "Àwọn òfin mẹ́ta ló ń ràn wá lọ́wọ́ láti dáàbò bo àwọn key."
+
+#: ../../authentication.md:23
+msgid ""
+"Never commit a key to source control. Add any file that holds a key, such"
+" as `.env`, to `.gitignore`."
+msgstr ""
+"Má ṣe commit key sínú source control láé. Fi fáìlì èyíkéyìí tó bá ní key, "
+"gẹ́gẹ́ bí `.env`, sí `.gitignore`."
+
+#: ../../authentication.md:24
+msgid ""
+"Never put a key in code that runs in a browser or a mobile app. Anyone "
+"can read it. Call the API from your own server instead."
+msgstr ""
+"Má ṣe fi key sínú code tí ń ṣiṣẹ́ nínú browser tàbí mobile app láé. Ẹnikẹ́ni "
+"ló lè kà á. Kàkà bẹ́ẹ̀, pe API náà láti inú server tirẹ."
+
+#: ../../authentication.md:25
+msgid ""
+"Never paste a key into a support message. Send the `request_id` from the "
+"error instead."
+msgstr ""
+"Má ṣe lẹ̀ key mọ́lẹ̀ sínú message support láé. Dípò bẹ́ẹ̀, fi "
+"`request_id` tí ó wà nínú error ránṣẹ́."
+
+#: ../../authentication.md:27
+msgid "Rotate keys without downtime"
+msgstr "Yí àwọn key padà láì dá iṣẹ́ dúró"
+
+#: ../../authentication.md:29
+msgid "The service accepts more than one key at a time. To rotate:"
+msgstr "Service náà ń gba key tó ju ọ̀kan lọ ní àkókò kan. Láti yí wọn padà:"
+
+#: ../../authentication.md:31
+msgid "Add the new key alongside the old one."
+msgstr "Fi key tuntun kún un lẹ́gbẹ̀ẹ́ key àtijọ́ náà."
+
+#: ../../authentication.md:32
+msgid "Deploy your applications with the new key."
+msgstr "Deploy àwọn application rẹ pẹ̀lú key tuntun náà."
+
+#: ../../authentication.md:33
+msgid "Remove the old key once nothing uses it."
+msgstr "Yọ key àtijọ́ náà kúrò nígbà tí kò sí ohun tó ń lò ó mọ́."
+
+#: ../../authentication.md:35
+msgid "If a key leaks, remove it straight away and issue a new one."
+msgstr ""
+"Tí key kan bá jáde síta, yọ ọ́ kúrò lẹ́sẹ̀kẹsẹ̀ kí o sì ṣe key tuntun."
+
+#: ../../authentication.md:37
+msgid "Authentication errors"
+msgstr "Àwọn aṣìṣe ìmúdájú"
+
+#: ../../authentication.md:39
+msgid "Both authentication failures return status `401`."
+msgstr "Àwọn ìkùnà ìmúdájú méjèèjì máa ń dá status `401` padà."
+
+#: ../../authentication.md
+msgid "`type`"
+msgstr "`type`"
+
+#: ../../authentication.md
+msgid "Cause"
+msgstr "Ìdí"
+
+#: ../../authentication.md
+msgid "What to do"
+msgstr "Ohun tí o yẹ kí o ṣe"
+
+#: ../../authentication.md
+msgid "`authentication_required`"
+msgstr "`authentication_required`"
+
+#: ../../authentication.md
+msgid "The `Authorization` header is missing, or it does not start with `Bearer`."
+msgstr ""
+"Header `Authorization` kò sí, tàbí kò bẹ̀rẹ̀ pẹ̀lú `Bearer`."
+
+#: ../../authentication.md
+msgid "Add the header in the format above."
+msgstr "Fi header náà kún un ní irú ọ̀nà tí a fi hàn lókè."
+
+#: ../../authentication.md
+msgid "`invalid_api_key`"
+msgstr "`invalid_api_key`"
+
+#: ../../authentication.md
+msgid "The header is well formed but the key is not recognised."
+msgstr "Header náà wà ní ọ̀nà tó tọ́, ṣùgbọ́n a kò mọ key náà."
+
+#: ../../authentication.md
+msgid "Check for typos, extra spaces and expired keys."
+msgstr ""
+"Ṣàyẹ̀wò àwọn àṣìṣe ìkọ̀wé, àwọn space tó pọ̀ ju, àti àwọn key tó ti parí."
+
+#: ../../authentication.md:46
+msgid "Do not retry a `401`. The same request will fail the same way."
+msgstr ""
+"Má ṣe tún `401` gbìyànjú. Request kan náà yóò tún kùnà ní ọ̀nà kan náà."

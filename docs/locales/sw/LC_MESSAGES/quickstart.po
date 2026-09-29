@@ -1,0 +1,302 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: sw\n"
+"Language-Team: sw <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../quickstart.md:1
+msgid "Quickstart"
+msgstr "Mwanzo wa haraka"
+
+#: ../../quickstart.md:3
+msgid "Make your first request and read the response in about five minutes."
+msgstr "Fanya ombi lako la kwanza na usome jibu ndani ya takriban dakika tano."
+
+#: ../../quickstart.md:5
+msgid ""
+"You need one of these on your machine: `curl`, Python 3.9 or later with "
+"the `requests` package, or Node.js 18 or later. Nothing else to install."
+msgstr ""
+"Unahitaji mojawapo ya hivi kwenye kompyuta yako: `curl`, Python 3.9 au "
+"ya baadaye yenye package ya `requests`, au Node.js 18 au ya baadaye. "
+"Huhitaji kusakinisha kitu kingine."
+
+#: ../../quickstart.md:7
+msgid "1. Set your environment"
+msgstr "1. Weka mazingira yako"
+
+#: ../../quickstart.md:9
+msgid ""
+"Your API key and the server address live in environment variables, so "
+"they never end up in your code."
+msgstr ""
+"API key yako na anwani ya server huhifadhiwa katika environment variables, "
+"ili zisiishie kamwe ndani ya code yako."
+
+#: ../../quickstart.md:11
+msgid "The demo key below is public. It is limited to 10 requests per minute."
+msgstr ""
+"Demo key iliyo hapa chini ni ya umma. Ina kikomo cha requests 10 kwa dakika."
+
+#: ../../quickstart.md:19
+msgid ""
+"If the demo server has been idle, the first request can take up to a "
+"minute to respond. Later requests are fast."
+msgstr ""
+"Ikiwa demo server imekuwa bila kutumika, request ya kwanza inaweza kuchukua "
+"hadi dakika moja kujibu. Requests zinazofuata huwa za haraka."
+
+#: ../../quickstart.md:22
+msgid "2. Send your first request"
+msgstr "2. Tuma ombi lako la kwanza"
+
+#: ../../quickstart.md:24
+msgid "Ask the large model a question. Pick the tab for your language."
+msgstr ""
+"Uliza large model swali. Chagua kichupo cha lugha yako."
+
+#: ../../quickstart.md
+msgid "curl"
+msgstr "curl"
+
+#: ../../quickstart.md
+msgid "Python"
+msgstr "Python"
+
+#: ../../quickstart.md
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: ../../quickstart.md:49
+msgid "3. Read the response"
+msgstr "3. Soma jibu"
+
+#: ../../quickstart.md:51
+msgid ""
+"A successful request returns status `200` and a JSON body like this. Your"
+" `id` will differ."
+msgstr ""
+"Request iliyofanikiwa hurudisha status `200` na JSON body kama hii. "
+"`id` yako itakuwa tofauti."
+
+#: ../../quickstart.md:68
+msgid ""
+"The model is a stub, so `output` repeats your prompt inside a fixed "
+"sentence. That keeps every example on these pages reproducible. The shape"
+" of the response is what matters here."
+msgstr ""
+"Model ni stub, kwa hivyo `output` hurudia prompt yako ndani ya sentensi "
+"iliyowekwa. Hii hufanya kila mfano kwenye kurasa hizi uweze kurudiwa "
+"kwa matokeo yale yale. Kinachojalisha hapa ni muundo wa response."
+
+#: ../../quickstart.md:70
+msgid "`id`"
+msgstr "`id`"
+
+#: ../../quickstart.md:71
+msgid ""
+"A unique ID for this generation. Log it if you need to refer to the "
+"generation later."
+msgstr ""
+"ID ya kipekee ya generation hii. Iweke kwenye log ikiwa utahitaji "
+"kurejelea generation hii baadaye."
+
+#: ../../quickstart.md:73
+msgid "`model`"
+msgstr "`model`"
+
+#: ../../quickstart.md:74
+msgid "The model that handled the request."
+msgstr "Model iliyoshughulikia request."
+
+#: ../../quickstart.md:76
+msgid "`language`"
+msgstr "`language`"
+
+#: ../../quickstart.md:77
+msgid "The language code you sent. If you leave it out, it defaults to `en`."
+msgstr ""
+"Language code uliyotuma. Ukiiacha, thamani ya kawaida huwa `en`."
+
+#: ../../quickstart.md:79
+msgid "`output`"
+msgstr "`output`"
+
+#: ../../quickstart.md:80
+msgid "The generated text."
+msgstr "Maandishi yaliyotengenezwa."
+
+#: ../../quickstart.md:82
+msgid "`finish_reason`"
+msgstr "`finish_reason`"
+
+#: ../../quickstart.md:83
+msgid ""
+"Why the response ended. `stop` means it finished naturally. `length` "
+"means it hit your `max_tokens` limit and was cut off."
+msgstr ""
+"Sababu iliyofanya response iishe. `stop` inamaanisha iliisha kawaida. "
+"`length` inamaanisha ilifikia kikomo chako cha `max_tokens` na ikakatwa."
+
+#: ../../quickstart.md:85
+msgid "`usage`"
+msgstr "`usage`"
+
+#: ../../quickstart.md:86
+msgid ""
+"How many tokens the request used. `total_tokens` is `prompt_tokens` plus "
+"`completion_tokens`. See [Tokens and languages](tokens.md) for how tokens"
+" are counted."
+msgstr ""
+"Idadi ya tokens zilizotumiwa na request. `total_tokens` ni `prompt_tokens` "
+"pamoja na `completion_tokens`. Angalia [Tokens and languages](tokens.md) "
+"kwa maelezo ya jinsi tokens zinavyohesabiwa."
+
+#: ../../quickstart.md:88
+msgid "When the response is cut off"
+msgstr "Wakati response inakatwa"
+
+#: ../../quickstart.md:90
+msgid ""
+"Set `max_tokens` to 10 and send the same prompt. The output stops early "
+"and `finish_reason` changes to `length`."
+msgstr ""
+"Weka `max_tokens` kuwa 10 na utume prompt hiyo hiyo. Output itaacha mapema "
+"na `finish_reason` itabadilika kuwa `length`."
+
+#: ../../quickstart.md:107
+msgid ""
+"If you see `length` and you expected a full answer, raise `max_tokens`. "
+"Each model has its own ceiling, listed under `max_output_tokens` in the "
+"[model list](#choose-a-model-and-language)."
+msgstr ""
+"Ukiona `length` na ulitarajia jibu kamili, ongeza `max_tokens`. Kila model "
+"ina kikomo chake, kilichoonyeshwa chini ya `max_output_tokens` katika "
+"[model list](#choose-a-model-and-language)."
+
+#: ../../quickstart.md:109
+msgid "Response headers"
+msgstr "Response headers"
+
+#: ../../quickstart.md:111
+msgid "Every response carries headers worth knowing about."
+msgstr "Kila response ina headers ambazo ni muhimu kuzifahamu."
+
+#: ../../quickstart.md:43
+msgid "Header"
+msgstr "Header"
+
+#: ../../quickstart.md:43
+msgid "Meaning"
+msgstr "Maana"
+
+#: ../../quickstart.md:43
+msgid "`X-Request-ID`"
+msgstr "`X-Request-ID`"
+
+#: ../../quickstart.md:43
+msgid "Unique ID for this request. Quote it when you contact support."
+msgstr ""
+"ID ya kipekee ya request hii. Itaje unapowasiliana na support."
+
+#: ../../quickstart.md:43
+msgid "`X-Data-Region`"
+msgstr "`X-Data-Region`"
+
+#: ../../quickstart.md:43
+msgid "The region that processed the request. Only on `/v1/generate`."
+msgstr ""
+"Region iliyochakata request. Inapatikana tu kwenye `/v1/generate`."
+
+#: ../../quickstart.md:43
+msgid "`X-RateLimit-Limit`"
+msgstr "`X-RateLimit-Limit`"
+
+#: ../../quickstart.md:43
+msgid "How many requests you get per minute."
+msgstr "Idadi ya requests unazopata kwa dakika."
+
+#: ../../quickstart.md:43
+msgid "`X-RateLimit-Remaining`"
+msgstr "`X-RateLimit-Remaining`"
+
+#: ../../quickstart.md:43
+msgid "How many you have left in the current minute."
+msgstr "Idadi ya requests zilizobaki katika dakika ya sasa."
+
+#: ../../quickstart.md:43
+msgid "`X-RateLimit-Reset`"
+msgstr "`X-RateLimit-Reset`"
+
+#: ../../quickstart.md:43
+msgid "Seconds until the counter resets."
+msgstr "Idadi ya sekunde hadi counter ijipange upya."
+
+#: ../../quickstart.md:121
+msgid "Choose a model and language"
+msgstr "Chagua model na lugha"
+
+#: ../../quickstart.md:123
+msgid "List the models to see which languages each one accepts."
+msgstr "Orodhesha models ili kuona kila moja inakubali lugha zipi."
+
+#: ../../quickstart.md:146
+msgid ""
+"The language codes are `en` English, `sw` Swahili, `ha` Hausa, `yo` "
+"Yoruba, `lg` Luganda and `am` Amharic. If you send a language the model "
+"does not support, you get an `unsupported_language` error that lists the "
+"ones it does. See [Errors](errors.md)."
+msgstr ""
+"Language codes ni `en` English, `sw` Swahili, `ha` Hausa, `yo` Yoruba, "
+"`lg` Luganda na `am` Amharic. Ukituma lugha ambayo model haiungi mkono, "
+"utapata error ya `unsupported_language` inayoorodhesha lugha inazounga "
+"mkono. Angalia [Errors](errors.md)."
+
+#: ../../quickstart.md:148
+msgid "Choose a region"
+msgstr "Chagua region"
+
+#: ../../quickstart.md:150
+msgid ""
+"The `region` parameter tells the service where to process your request. "
+"Use `ke` for Kenya, `ug` for Uganda, `ma` for Morocco or `mu` for "
+"Mauritius. If you leave it out, the default is `ke`. The `X-Data-Region` "
+"response header confirms where the request ran."
+msgstr ""
+"Parameter ya `region` huiambia service mahali pa kuchakata request yako. "
+"Tumia `ke` kwa Kenya, `ug` kwa Uganda, `ma` kwa Morocco au `mu` kwa "
+"Mauritius. Ukiiacha, default ni `ke`. Response header ya `X-Data-Region` "
+"huthibitisha mahali request ilitekelezwa."
+
+#: ../../quickstart.md:152
+msgid "Next steps"
+msgstr "Hatua zinazofuata"
+
+#: ../../quickstart.md:154
+msgid "[Authentication](authentication.md) explains keys in more detail."
+msgstr "[Authentication](authentication.md) inaeleza keys kwa undani zaidi."
+
+#: ../../quickstart.md:155
+msgid "[Errors](errors.md) covers every error and which ones to retry."
+msgstr "[Errors](errors.md) inaeleza kila error na ni zipi za kujaribu tena."
+
+#: ../../quickstart.md:156
+msgid "[Production checklist](production.md) is what to review before you ship."
+msgstr ""
+"[Production checklist](production.md) ndiyo ya kukagua kabla ya ku-release."

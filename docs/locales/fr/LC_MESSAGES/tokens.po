@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../tokens.md:1
+msgid "Tokens and languages"
+msgstr "Tokens et langues"
+
+#: ../../tokens.md:3
+msgid ""
+"Models do not read words. They read tokens, which are pieces of text. You"
+" pay for tokens, your `max_tokens` limit is measured in tokens, and "
+"longer token counts take longer to process. So it helps to know how many "
+"tokens your text will use before you send it."
+msgstr ""
+"Les modèles ne lisent pas les mots. Ils lisent des tokens, qui sont des "
+"fragments de texte. Vous payez pour les tokens, votre limite "
+"`max_tokens` est mesurée en tokens, et un nombre plus élevé de tokens "
+"prend plus de temps à traiter. Il est donc utile de savoir combien de "
+"tokens votre texte utilisera avant de l’envoyer."
+
+#: ../../tokens.md:5
+msgid "Why the same idea can cost different amounts"
+msgstr "Pourquoi une même idée peut coûter des quantités différentes"
+
+#: ../../tokens.md:7
+msgid ""
+"A tokenizer that was built mostly around English text often cuts words "
+"from other languages into more pieces. The same sentence in two languages"
+" can therefore use a different number of tokens, even when the meaning is"
+" identical. If you build for several languages, check token counts for "
+"each one instead of assuming they match."
+msgstr ""
+"Un tokenizer conçu principalement autour du texte anglais découpe souvent"
+" les mots d’autres langues en davantage de fragments. Une même phrase dans"
+" deux langues peut donc utiliser un nombre différent de tokens, même si "
+"son sens est identique. Si vous développez pour plusieurs langues, vérifiez"
+" le nombre de tokens pour chacune au lieu de supposer qu’ils sont identiques."
+
+#: ../../tokens.md:9
+msgid "Count tokens before you send"
+msgstr "Comptez les tokens avant l’envoi"
+
+#: ../../tokens.md:11
+msgid "`POST /v1/tokens/count` returns the token count for a piece of text."
+msgstr "`POST /v1/tokens/count` renvoie le nombre de tokens pour un fragment de texte."
+
+#: ../../tokens.md:14
+msgid ""
+"Lugha uses a deliberately simple tokenizer. It cuts every word into "
+"pieces of at most four characters. That makes results easy to explain and"
+" reproduce. It does not describe how any real model counts tokens, so "
+"treat the numbers below as a demonstration of the endpoint, not a "
+"measurement."
+msgstr ""
+"Lugha utilise volontairement un tokenizer simple. Il découpe chaque mot "
+"en fragments de quatre caractères au maximum. Cela rend les résultats "
+"faciles à expliquer et à reproduire. Il ne décrit pas la manière dont un "
+"modèle réel compte les tokens. Considérez donc les nombres ci-dessous comme"
+" une démonstration de l’endpoint, et non comme une mesure."
+
+#: ../../tokens.md:17
+msgid "Count an English sentence:"
+msgstr "Comptez les tokens d’une phrase anglaise :"
+
+#: ../../tokens.md:30
+msgid "Now a Swahili sentence:"
+msgstr "Maintenant, une phrase en swahili :"
+
+#: ../../tokens.md:43
+msgid "`token_count`"
+msgstr "`token_count`"
+
+#: ../../tokens.md:44
+msgid "The number of tokens in the text."
+msgstr "Le nombre de tokens dans le texte."
+
+#: ../../tokens.md:46
+msgid "`word_count`"
+msgstr "`word_count`"
+
+#: ../../tokens.md:47
+msgid "The number of words, split on whitespace."
+msgstr "Le nombre de mots, séparés selon les espaces."
+
+#: ../../tokens.md:49
+msgid "`tokens_per_word`"
+msgstr "`tokens_per_word`"
+
+#: ../../tokens.md:50
+msgid ""
+"`token_count` divided by `word_count`, rounded to two decimals. Use it to"
+" compare texts of different lengths."
+msgstr ""
+"`token_count` divisé par `word_count`, arrondi à deux décimales. Utilisez-le"
+" pour comparer des textes de longueurs différentes."
+
+#: ../../tokens.md:52
+msgid "How tokens show up elsewhere"
+msgstr "Comment les tokens apparaissent ailleurs"
+
+#: ../../tokens.md:54
+msgid ""
+"The `usage` object in a `/v1/generate` response reports the same counts "
+"for a real request: `prompt_tokens` for what you sent and "
+"`completion_tokens` for what came back."
+msgstr ""
+"L’objet `usage` dans une réponse `/v1/generate` indique les mêmes nombres"
+" pour une requête réelle : `prompt_tokens` pour ce que vous avez envoyé et"
+" `completion_tokens` pour ce qui a été renvoyé."
+
+#: ../../tokens.md:56
+msgid ""
+"`max_tokens` limits `completion_tokens` only. It does not include your "
+"prompt. If the model reaches the limit, the response ends with "
+"`finish_reason` set to `length`."
+msgstr ""
+"`max_tokens` limite uniquement `completion_tokens`. Il n’inclut pas votre "
+"prompt. Si le modèle atteint la limite, la réponse se termine avec "
+"`finish_reason` défini sur `length`."
+
+#: ../../tokens.md:58
+msgid ""
+"Count your prompt first if you want to estimate the size of a request "
+"before you make it."
+msgstr ""
+"Comptez d’abord les tokens de votre prompt si vous souhaitez estimer la "
+"taille d’une requête avant de l’envoyer."

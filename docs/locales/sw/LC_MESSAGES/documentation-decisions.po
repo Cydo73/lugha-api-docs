@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: sw\n"
+"Language-Team: sw <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../documentation-decisions.md:1
+msgid "Documentation decisions"
+msgstr "Maamuzi ya nyaraka"
+
+#: ../../documentation-decisions.md:3
+msgid ""
+"I wrote these pages as a sample of how I document an API for developers. "
+"This page explains the choices, so you can judge my thinking as well as "
+"my writing."
+msgstr ""
+"Niliandika kurasa hizi kama mfano wa jinsi ninavyoandika nyaraka za API "
+"kwa ajili ya developers. Ukurasa huu unaeleza maamuzi niliyofanya, ili "
+"uweze kutathmini namna ninavyofikiri pamoja na jinsi ninavyoandika."
+
+#: ../../documentation-decisions.md:5
+msgid "Why the quickstart comes first"
+msgstr "Kwa nini quickstart inakuja kwanza"
+
+#: ../../documentation-decisions.md:7
+msgid ""
+"Someone evaluating an API wants proof that it works before they read "
+"anything else. The quickstart gets a real request running in a few "
+"minutes, then explains every field in the response. Every other page "
+"links back to it."
+msgstr ""
+"Mtu anayekagua API anataka uthibitisho kwamba inafanya kazi kabla ya kusoma "
+"kitu kingine. Quickstart inawezesha request halisi kuanza kufanya kazi ndani "
+"ya dakika chache, kisha inaeleza kila field katika response. Kila ukurasa "
+"mwingine unaunganisha tena na ukurasa huo."
+
+#: ../../documentation-decisions.md:9
+msgid "Why the examples are real files"
+msgstr "Kwa nini mifano ni faili halisi"
+
+#: ../../documentation-decisions.md:11
+msgid ""
+"The code on these pages is pulled straight from the `examples` folder. I "
+"ran each one against the running service: curl, Python and JavaScript. "
+"The docs show exactly the code that ran, and there is no second copy to "
+"go stale. Sample code that drifts away from the docs is one of the most "
+"common ways developer documentation stops being trusted."
+msgstr ""
+"Code iliyo kwenye kurasa hizi inatoka moja kwa moja kwenye folda ya "
+"`examples`. Niliendesha kila mfano dhidi ya service inayofanya kazi: curl, "
+"Python na JavaScript. Nyaraka zinaonyesha code ileile iliyotekelezwa, na "
+"hakuna nakala ya pili inayoweza kupitwa na wakati. Sample code inayotofautiana "
+"na nyaraka ni mojawapo ya sababu zinazofanya nyaraka za developers zipoteze "
+"uaminifu."
+
+#: ../../documentation-decisions.md:13
+msgid "Why errors get their own page"
+msgstr "Kwa nini errors zina ukurasa wake"
+
+#: ../../documentation-decisions.md:15
+msgid ""
+"Errors are where developers spend most of their debugging time. Every "
+"failure uses one shape, with a `type` to branch on, a `message` for "
+"people and a `request_id` for support. The table says which errors are "
+"worth retrying, because that is the question a developer actually has at "
+"that moment."
+msgstr ""
+"Errors ndizo sehemu ambayo developers hutumia muda wao mwingi wa debugging. "
+"Kila failure hutumia muundo mmoja, wenye `type` ya kuamua hatua inayofuata, "
+"`message` kwa ajili ya watu na `request_id` kwa ajili ya support. Jedwali "
+"linaonyesha ni errors zipi zinafaa kujaribiwa tena, kwa sababu hilo ndilo "
+"swali ambalo developer huwa nalo wakati huo."
+
+#: ../../documentation-decisions.md:17
+msgid "Why the reference is generated"
+msgstr "Kwa nini reference inazalishwa"
+
+#: ../../documentation-decisions.md:19
+msgid ""
+"The API reference comes from `openapi/openapi.yaml`, and that file is "
+"exported from the service code. The continuous integration check fails if"
+" the file is out of date. I would rather explain the API in prose and let"
+" a tool list the parameters, because copying parameters by hand is how "
+"references end up wrong."
+msgstr ""
+"API reference inatoka kwenye `openapi/openapi.yaml`, na faili hiyo "
+"hutolewa kutoka kwenye code ya service. Ukaguzi wa continuous integration "
+"hushindwa ikiwa faili hiyo haijasasishwa. Ningependelea kueleza API kwa "
+"maandishi na kuacha tool iorodheshe parameters, kwa sababu kunakili "
+"parameters kwa mkono ndiko kunakosababisha references kuwa na makosa."
+
+#: ../../documentation-decisions.md:21
+msgid "Why the model is a stub"
+msgstr "Kwa nini model ni stub"
+
+#: ../../documentation-decisions.md:23
+msgid ""
+"I do not have a real model, and inventing behaviour I cannot verify would"
+" make these docs untrustworthy. The stub returns predictable text, so "
+"every response on these pages is exactly what you get if you run the "
+"request. The tokenizer is simple for the same reason, and the tokens page"
+" says so plainly."
+msgstr ""
+"Sina model halisi, na kubuni tabia ambayo siwezi kuithibitisha kungefanya "
+"nyaraka hizi zisiwe za kuaminika. Stub inarudisha text inayotabirika, hivyo "
+"kila response kwenye kurasa hizi ni sawa kabisa na utakayopata ukiendesha "
+"request. Tokenizer ni rahisi kwa sababu hiyo hiyo, na ukurasa wa tokens "
+"unasema hivyo wazi."
+
+#: ../../documentation-decisions.md:25
+msgid "Why tokens and regions get attention"
+msgstr "Kwa nini tokens na regions zimepewa kipaumbele"
+
+#: ../../documentation-decisions.md:27
+msgid ""
+"For developers building in African languages, two questions come up "
+"early: how many tokens their text will use, and where their data is "
+"processed. I added a token counting endpoint and a `region` parameter to "
+"give those questions a place in the documentation. They are illustrative "
+"design choices for this sample, not claims about any real service."
+msgstr ""
+"Kwa developers wanaojenga mifumo kwa lugha za Kiafrika, maswali mawili "
+"huibuka mapema: maandishi yao yatatumia tokens ngapi, na data yao "
+"itachakatwa wapi. Niliongeza endpoint ya kuhesabu tokens na parameter ya "
+"`region` ili kutoa nafasi ya maswali hayo ndani ya nyaraka. Haya ni maamuzi "
+"ya mfano ya muundo wa mfumo huu, si madai kuhusu service yoyote halisi."
+
+#: ../../documentation-decisions.md:29
+msgid "What I left out on purpose"
+msgstr "Nilichoacha kwa makusudi"
+
+#: ../../documentation-decisions.md:31
+msgid ""
+"I left out streaming, official SDK packages, billing and pagination. A "
+"small set of pages done properly is more useful than a large set done "
+"quickly. Streaming would be my next addition, because it changes what a "
+"quickstart looks like."
+msgstr ""
+"Niliondoa streaming, official SDK packages, billing na pagination. Seti "
+"ndogo ya kurasa zilizofanywa vizuri ni muhimu zaidi kuliko seti kubwa "
+"iliyofanywa kwa haraka. Streaming ingekuwa nyongeza yangu inayofuata, kwa "
+"sababu inabadilisha jinsi quickstart inavyoonekana."
+
+#: ../../documentation-decisions.md:33
+msgid "What I would do with a real product"
+msgstr "Ningefanya nini na bidhaa halisi"
+
+#: ../../documentation-decisions.md:35
+msgid ""
+"I would sit with the engineers and read the code before writing a word. I"
+" would run every example myself, and I would use support tickets and "
+"usage data to decide what to document first. I would also keep a "
+"changelog, so developers can see what changed between versions."
+msgstr ""
+"Ningekaa na engineers na kusoma code kabla ya kuandika hata neno moja. "
+"Ningeendesha kila mfano mwenyewe, na ningetumia support tickets pamoja na "
+"data ya matumizi kuamua nini cha kuandika kwanza. Pia ningedumisha "
+"changelog, ili developers waweze kuona kilichobadilika kati ya versions."
