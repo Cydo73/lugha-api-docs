@@ -11,11 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function getCurrentLanguage() {
         const path = window.location.pathname;
-
         const match = path.match(
             /\/(en|fr|pt|sw|zu|yo|ar)(?=\/|$)/
         );
-
         return match ? match[1] : "en";
     }
 
@@ -31,10 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         button.type = "button";
         button.setAttribute("aria-haspopup", "true");
         button.setAttribute("aria-expanded", "false");
-        button.setAttribute(
-            "aria-label",
-            "Select language"
-        );
+        button.setAttribute("aria-label", "Select language");
 
         button.innerHTML = `
             <span class="lugha-language-globe" aria-hidden="true">
@@ -104,53 +99,42 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function buildLanguageUrl(targetLanguage) {
-    const currentPath = window.location.pathname;
-    const currentLanguage = getCurrentLanguage();
+        const currentPath = window.location.pathname;
+        const currentLanguage = getCurrentLanguage();
 
-    // Already on the requested language.
-    if (targetLanguage === currentLanguage) {
-        return currentPath;
-    }
-
-    // Switching TO English.
-    // English is served from the root, without /en/.
-    if (targetLanguage === "en") {
-        if (currentLanguage === "en") {
+        if (targetLanguage === currentLanguage) {
             return currentPath;
         }
 
-        const languagePrefix = `/${currentLanguage}`;
+        if (targetLanguage === "en") {
+            if (currentLanguage === "en") {
+                return currentPath;
+            }
 
-        const englishPath = currentPath.replace(
-            languagePrefix,
-            ""
+            const languagePrefix = `/${currentLanguage}`;
+
+            const englishPath = currentPath.replace(
+                languagePrefix,
+                ""
+            );
+
+            return englishPath || "/";
+        }
+
+        if (currentLanguage === "en") {
+            return `/${targetLanguage}${currentPath}`;
+        }
+
+        const currentLanguagePrefix = `/${currentLanguage}`;
+
+        return currentPath.replace(
+            currentLanguagePrefix,
+            `/${targetLanguage}`
         );
-
-        return englishPath || "/";
     }
 
-    // Switching FROM English to another language.
-    if (currentLanguage === "en") {
-        return `/${targetLanguage}${currentPath}`;
-    }
-
-    // Switching between two non-English languages.
-    const currentLanguagePrefix = `/${currentLanguage}`;
-
-    return currentPath.replace(
-        currentLanguagePrefix,
-        `/${targetLanguage}`
-    );
-}
-
-    const {
-        picker,
-        button,
-    } = buildLanguagePicker();
-
-    const options = picker.querySelectorAll(
-        ".lugha-language-option"
-    );
+    const { picker, button } = buildLanguagePicker();
+    const options = picker.querySelectorAll(".lugha-language-option");
 
     function openPicker() {
         picker.classList.add("is-open");
@@ -176,11 +160,8 @@ document.addEventListener("DOMContentLoaded", () => {
         option.addEventListener("click", (event) => {
             event.preventDefault();
 
-            const targetLanguage =
-                option.dataset.language;
-
-            const destination =
-                buildLanguageUrl(targetLanguage);
+            const targetLanguage = option.dataset.language;
+            const destination = buildLanguageUrl(targetLanguage);
 
             window.location.href = destination;
         });
@@ -206,7 +187,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.documentElement.lang = "ar";
     } else {
         document.documentElement.dir = "ltr";
-        document.documentElement.lang =
-            currentLanguage;
+        document.documentElement.lang = currentLanguage;
     }
 });
