@@ -9,12 +9,21 @@ document.addEventListener("DOMContentLoaded", () => {
         { code: "ar", name: "العربية" },
     ];
 
+    // Sphinx writes the language of this build into DOCUMENTATION_OPTIONS and
+    // into the lang attribute of the html element. DOCUMENTATION_OPTIONS is a
+    // top level const, so it is not a property of window.
     function getCurrentLanguage() {
-        const path = window.location.pathname;
-        const match = path.match(
-            /\/(en|fr|pt|sw|zu|yo|ar)(?=\/|$)/
-        );
-        return match ? match[1] : "en";
+        const fromOptions =
+            typeof DOCUMENTATION_OPTIONS !== "undefined"
+                ? DOCUMENTATION_OPTIONS.LANGUAGE
+                : undefined;
+
+        const candidate = fromOptions || document.documentElement.lang;
+        const code = (candidate || "en").split(/[-_]/)[0];
+
+        return supportedLanguages.some((language) => language.code === code)
+            ? code
+            : "en";
     }
 
     function buildLanguagePicker() {
@@ -62,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         supportedLanguages.forEach((language) => {
             const option = document.createElement("a");
 
-            option.href = "#";
+            option.href = buildLanguageUrl(language.code);
             option.dataset.language = language.code;
             option.className = "lugha-language-option";
             option.setAttribute("role", "menuitem");
@@ -98,39 +107,26 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
 
+    // English lives at the site root and every other language in its own folder,
+    // for example /lugha-api-docs/ and /lugha-api-docs/fr/. Sphinx stores the path
+    // back to the root of the current build in data-content_root, so this works
+    // on any host and under any base path, including GitHub project pages.
     function buildLanguageUrl(targetLanguage) {
-        const currentPath = window.location.pathname;
         const currentLanguage = getCurrentLanguage();
+        const contentRoot = document.documentElement.dataset.content_root || "./";
+        const buildRoot = new URL(contentRoot, window.location.href).pathname;
 
-        if (targetLanguage === currentLanguage) {
-            return currentPath;
-        }
+        const pagePath = window.location.pathname.slice(buildRoot.length);
 
-        if (targetLanguage === "en") {
-            if (currentLanguage === "en") {
-                return currentPath;
-            }
+        const siteRoot =
+            currentLanguage === "en"
+                ? buildRoot
+                : buildRoot.replace(new RegExp(`${currentLanguage}/$`), "");
 
-            const languagePrefix = `/${currentLanguage}`;
+        const targetRoot =
+            targetLanguage === "en" ? siteRoot : `${siteRoot}${targetLanguage}/`;
 
-            const englishPath = currentPath.replace(
-                languagePrefix,
-                ""
-            );
-
-            return englishPath || "/";
-        }
-
-        if (currentLanguage === "en") {
-            return `/${targetLanguage}${currentPath}`;
-        }
-
-        const currentLanguagePrefix = `/${currentLanguage}`;
-
-        return currentPath.replace(
-            currentLanguagePrefix,
-            `/${targetLanguage}`
-        );
+        return `${targetRoot}${pagePath}${window.location.search}${window.location.hash}`;
     }
 
     const { picker, button } = buildLanguagePicker();
@@ -157,13 +153,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     options.forEach((option) => {
-        option.addEventListener("click", (event) => {
-            event.preventDefault();
-
-            const targetLanguage = option.dataset.language;
-            const destination = buildLanguageUrl(targetLanguage);
-
-            window.location.href = destination;
+        // Rebuild the link on click so the current hash and search are kept.
+        option.addEventListener("click", () => {
+            option.href = buildLanguageUrl(option.dataset.language);
         });
     });
 
@@ -180,13 +172,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    const currentLanguage = getCurrentLanguage();
+    const activeLanguage = getCurrentLanguage();
 
-    if (currentLanguage === "ar") {
+    if (activeLanguage === "ar") {
         document.documentElement.dir = "rtl";
         document.documentElement.lang = "ar";
     } else {
         document.documentElement.dir = "ltr";
-        document.documentElement.lang = currentLanguage;
+        document.documentElement.lang = activeLanguage;
     }
 });
