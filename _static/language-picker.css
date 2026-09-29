@@ -1,0 +1,176 @@
+.lugha-language-picker {
+    position: fixed;
+    top: 1rem;
+    right: 1.25rem;
+    z-index: 1000;
+    font-size: 0.9rem;
+}
+
+.lugha-language-button {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+
+    min-height: 2.35rem;
+    padding: 0.45rem 0.75rem;
+
+    border: 1px solid var(--color-sidebar-background-border);
+    border-radius: 0.55rem;
+
+    background: var(--color-background-primary);
+    color: var(--color-foreground-primary);
+
+    font: inherit;
+    cursor: pointer;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.15s ease;
+}
+
+.lugha-language-button:hover {
+    border-color: #0D7A7A;
+    box-shadow: 0 4px 14px rgba(13, 122, 122, 0.14);
+}
+
+.lugha-language-button:focus-visible {
+    outline: 2px solid #0D7A7A;
+    outline-offset: 2px;
+}
+
+.lugha-language-globe {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 1.05rem;
+    height: 1.05rem;
+
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.lugha-chevron {
+    margin-left: 0.1rem;
+    font-size: 0.9rem;
+    transition: transform 0.15s ease;
+}
+
+.lugha-language-picker.is-open .lugha-chevron {
+    transform: rotate(180deg);
+}
+
+.lugha-language-menu {
+    position: absolute;
+    top: calc(100% + 0.45rem);
+    right: 0;
+
+    width: 12rem;
+    padding: 0.45rem;
+
+    border: 1px solid var(--color-sidebar-background-border);
+    border-radius: 0.65rem;
+
+    background: var(--color-background-primary);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12),
+        0 2px 8px rgba(0, 0, 0, 0.06);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.35rem);
+
+    transition:
+        opacity 0.15s ease,
+        transform 0.15s ease,
+        visibility 0.15s ease;
+}
+
+.lugha-language-picker.is-open .lugha-language-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lugha-language-label {
+    padding: 0.45rem 0.65rem 0.35rem;
+
+    color: var(--color-foreground-secondary);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.lugha-language-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.55rem 0.65rem;
+
+    border-radius: 0.4rem;
+
+    color: var(--color-foreground-primary);
+    text-decoration: none;
+
+    transition:
+        background-color 0.12s ease,
+        color 0.12s ease;
+}
+
+.lugha-language-option:hover {
+    background: var(--color-background-secondary);
+    color: #0D7A7A;
+    text-decoration: none;
+}
+
+.lugha-language-option[aria-current="true"] {
+    color: #0D7A7A;
+    font-weight: 600;
+}
+
+.lugha-check {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+@media (max-width: 700px) {
+    .lugha-language-picker {
+        top: 0.65rem;
+        right: 0.75rem;
+    }
+
+    .lugha-language-button {
+        padding: 0.4rem 0.6rem;
+    }
+
+    .lugha-current-language {
+        max-width: 6rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+html[dir="rtl"] .lugha-language-picker {
+    right: auto;
+    left: 1.25rem;
+}
+
+html[dir="rtl"] .lugha-language-menu {
+    right: auto;
+    left: 0;
+}
+
+@media (max-width: 700px) {
+    html[dir="rtl"] .lugha-language-picker {
+        right: auto;
+        left: 0.75rem;
+    }
+}
