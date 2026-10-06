@@ -1,0 +1,376 @@
+openapi: 3.1.0
+info:
+  title: Lugha Reference API
+  description: Lugha is a reference API for a text generation service that supports
+    African languages. It exists to demonstrate developer documentation. The model
+    is a stub and the service is not a real product.
+  version: 1.0.0
+servers:
+- url: http://localhost:8000
+paths:
+  /health:
+    get:
+      tags:
+      - Meta
+      summary: Check service health
+      operationId: health_health_get
+      responses:
+        '200':
+          description: The service is running.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+  /v1/models:
+    get:
+      tags:
+      - Models
+      summary: List models
+      operationId: list_models_v1_models_get
+      responses:
+        '200':
+          description: The models you can use.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelList'
+        '401':
+          description: The API key is missing or not valid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate limit exceeded. Wait for the number of seconds in the
+            Retry-After header.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      security:
+      - BearerAuth: []
+  /v1/generate:
+    post:
+      tags:
+      - Generation
+      summary: Generate text
+      description: Sends a prompt to a model and returns the response. The response
+        includes an X-Data-Region header that echoes the region that processed the
+        request.
+      operationId: generate_v1_generate_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenerateRequest'
+        required: true
+      responses:
+        '200':
+          description: The generated text and token usage.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerateResponse'
+        '400':
+          description: The request was invalid. Check the message field.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: The API key is missing or not valid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: The model or endpoint does not exist.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate limit exceeded. Wait for the number of seconds in the
+            Retry-After header.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      security:
+      - BearerAuth: []
+  /v1/tokens/count:
+    post:
+      tags:
+      - Tokens
+      summary: Count tokens
+      operationId: tokens_count_v1_tokens_count_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TokenCountRequest'
+        required: true
+      responses:
+        '200':
+          description: The token count for the text.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenCountResponse'
+        '400':
+          description: The request was invalid. Check the message field.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: The API key is missing or not valid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate limit exceeded. Wait for the number of seconds in the
+            Retry-After header.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      security:
+      - BearerAuth: []
+components:
+  schemas:
+    ErrorDetail:
+      properties:
+        type:
+          type: string
+          title: Type
+          description: Machine readable error category. Branch your code on this value.
+          examples:
+          - invalid_request
+        message:
+          type: string
+          title: Message
+          description: Human readable explanation. Do not parse it.
+          examples:
+          - 'model: Field required'
+        request_id:
+          type: string
+          title: Request Id
+          description: Quote this when contacting support.
+          examples:
+          - req_8a1d4c92e07b
+      type: object
+      required:
+      - type
+      - message
+      - request_id
+      title: ErrorDetail
+    ErrorResponse:
+      properties:
+        error:
+          $ref: '#/components/schemas/ErrorDetail'
+      type: object
+      required:
+      - error
+      title: ErrorResponse
+    GenerateRequest:
+      properties:
+        model:
+          type: string
+          title: Model
+          description: ID of the model to use. List them with GET /v1/models.
+          examples:
+          - lugha-demo-large
+        prompt:
+          type: string
+          maxLength: 4000
+          minLength: 1
+          title: Prompt
+          description: The text you want the model to respond to.
+          examples:
+          - Habari, tafadhali nieleze Kampala ni nini.
+        language:
+          type: string
+          title: Language
+          description: Language code of the prompt. Each model supports a different
+            set.
+          default: en
+          examples:
+          - sw
+        max_tokens:
+          type: integer
+          minimum: 1.0
+          title: Max Tokens
+          description: Upper limit on tokens in the response. Cannot exceed the model's
+            max_output_tokens.
+          default: 64
+          examples:
+          - 64
+        region:
+          type: string
+          title: Region
+          description: 'Where the request is processed: ke, ug, ma or mu.'
+          default: ke
+          examples:
+          - ug
+      type: object
+      required:
+      - model
+      - prompt
+      title: GenerateRequest
+    GenerateResponse:
+      properties:
+        id:
+          type: string
+          title: Id
+          description: Unique ID for this generation.
+          examples:
+          - gen_3f9c2a71b8d4
+        model:
+          type: string
+          title: Model
+          description: The model that handled the request.
+        language:
+          type: string
+          title: Language
+          description: The language code you sent.
+        output:
+          type: string
+          title: Output
+          description: The generated text.
+        finish_reason:
+          type: string
+          enum:
+          - stop
+          - length
+          title: Finish Reason
+          description: stop means the response ended naturally. length means it was
+            cut off at max_tokens.
+        usage:
+          $ref: '#/components/schemas/Usage'
+          description: Token counts for this request.
+      type: object
+      required:
+      - id
+      - model
+      - language
+      - output
+      - finish_reason
+      - usage
+      title: GenerateResponse
+    HealthResponse:
+      properties:
+        status:
+          type: string
+          title: Status
+          description: Always ok when the service is running.
+          examples:
+          - ok
+      type: object
+      required:
+      - status
+      title: HealthResponse
+    ModelInfo:
+      properties:
+        id:
+          type: string
+          title: Id
+          description: Model ID. Pass this as model when you generate text.
+        max_output_tokens:
+          type: integer
+          title: Max Output Tokens
+          description: Largest max_tokens value this model accepts.
+        languages:
+          items:
+            type: string
+          type: array
+          title: Languages
+          description: Language codes this model accepts.
+      type: object
+      required:
+      - id
+      - max_output_tokens
+      - languages
+      title: ModelInfo
+    ModelList:
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/ModelInfo'
+          type: array
+          title: Data
+          description: The available models.
+      type: object
+      required:
+      - data
+      title: ModelList
+    TokenCountRequest:
+      properties:
+        text:
+          type: string
+          maxLength: 20000
+          minLength: 1
+          title: Text
+          description: Text to count tokens for.
+          examples:
+          - Habari ya asubuhi, rafiki yangu.
+      type: object
+      required:
+      - text
+      title: TokenCountRequest
+    TokenCountResponse:
+      properties:
+        token_count:
+          type: integer
+          title: Token Count
+          description: Number of tokens in the text.
+        word_count:
+          type: integer
+          title: Word Count
+          description: Number of words in the text, split on whitespace.
+        tokens_per_word:
+          type: number
+          title: Tokens Per Word
+          description: token_count divided by word_count, rounded to two decimals.
+      type: object
+      required:
+      - token_count
+      - word_count
+      - tokens_per_word
+      title: TokenCountResponse
+    Usage:
+      properties:
+        prompt_tokens:
+          type: integer
+          title: Prompt Tokens
+          description: Tokens in the prompt.
+        completion_tokens:
+          type: integer
+          title: Completion Tokens
+          description: Tokens in the response.
+        total_tokens:
+          type: integer
+          title: Total Tokens
+          description: prompt_tokens plus completion_tokens.
+      type: object
+      required:
+      - prompt_tokens
+      - completion_tokens
+      - total_tokens
+      title: Usage
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: 'Send your API key as: Authorization: Bearer YOUR_API_KEY. The
+        public demo key is lugha_demo_key.'
+tags:
+- name: Generation
+  description: Create text with a model.
+- name: Models
+  description: See which models and languages are available.
+- name: Tokens
+  description: Count tokens before you send a request.
+- name: Meta
+  description: Service health.

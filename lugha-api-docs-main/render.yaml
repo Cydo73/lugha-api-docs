@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: lugha-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: LUGHA_API_KEYS
+        value: lugha_demo_key
+      - key: LUGHA_RATE_LIMIT_PER_MINUTE
+        value: "10"
+      - key: PUBLIC_BASE_URL
+        value: https://lugha-api.onrender.com

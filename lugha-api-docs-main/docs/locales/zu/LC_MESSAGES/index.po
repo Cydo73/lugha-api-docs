@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: 2026-09-29 09:16+0300\n"
+"Last-Translator: \n"
+"Language: zu\n"
+"Language-Team: Zulu\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../index.md:1
+msgid "Lugha Reference API"
+msgstr "I-API Yereferensi ye-Lugha"
+
+#: ../../index.md:3
+msgid ""
+"Lugha is a small text generation API that supports African languages. Use"
+" it to generate text, count tokens before you send a request, and choose "
+"the region that processes your data."
+msgstr ""
+"I-Lugha iyi-API encane yokukhiqiza umbhalo esekela izilimi zase-Afrika. "
+"Yisebenzise ukukhiqiza umbhalo, ukubala amathokheni ngaphambi kokuthumela "
+"isicelo, nokukhetha isifunda esicutungula idatha yakho."
+
+#: ../../index.md:5
+msgid "Independent documentation exercise"
+msgstr "Umsebenzi ozimele wokubhala imibhalo"
+
+#: ../../index.md:8
+msgid ""
+"Lugha is not a real product. It is a reference API written to show how I "
+"document an AI inference service for developers. The model is a stub that"
+" returns predictable text, so every example on these pages runs and "
+"returns exactly what is shown."
+msgstr ""
+"I-Lugha akuwona umkhiqizo wangempela. Iyi-API yereferensi ebhalwe ukuze "
+"ibonise ukuthi ngibhala kanjani imibhalo yensizakalo ye-AI inference "
+"yabathuthukisi. Imodeli iyi-stub ebuyisa umbhalo obikezelwayo, ngakho "
+"zonke izibonelo kula makhasi ziyasebenza futhi zibuyisa lokho okubonisiwe."
+
+#: ../../index.md:11
+msgid "Start here"
+msgstr "Qala lapha"
+
+#: ../../index.md:16
+msgid "Quickstart"
+msgstr "Ukuqala ngokushesha"
+
+#: ../../index.md:20
+msgid "Make your first request in about five minutes."
+msgstr "Yenza isicelo sakho sokuqala cishe emizuzwini emihlanu."
+
+#: ../../index.md:23
+msgid "Handle errors"
+msgstr "Phatha amaphutha"
+
+#: ../../index.md:27
+msgid ""
+"Every error has a type, a message and a request ID. Learn what to do with"
+" each one."
+msgstr ""
+"Iphutha ngalinye linohlobo, umlayezo kanye ne-ID yesicelo. Funda ukuthi "
+"ungenzani ngalinye."
+
+#: ../../index.md:30
+msgid "Go to production"
+msgstr "Yiya ekukhiqizeni"
+
+#: ../../index.md:34
+msgid "A checklist to work through before you ship."
+msgstr "Uhlu lokuhlola okufanele ululandele ngaphambi kokukhipha umkhiqizo."
+
+#: ../../index.md:37
+msgid "API reference"
+msgstr "Ireferensi ye-API"
+
+#: ../../index.md:41
+msgid "Every endpoint, parameter and response."
+msgstr "Yonke i-endpoint, ipharamitha nempendulo."

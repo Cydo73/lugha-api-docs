@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt\n"
+"Language-Team: pt <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../authentication.md:1
+msgid "Authentication"
+msgstr "Autenticação"
+
+#: ../../authentication.md:3
+msgid ""
+"Every endpoint except `/health` needs an API key. Send it in the "
+"`Authorization` header as a bearer token."
+msgstr ""
+"Todos os endpoints, exceto `/health`, precisam de uma chave de API. "
+"Envie-a no cabeçalho `Authorization` como um token Bearer."
+
+#: ../../authentication.md:9
+msgid ""
+"The public demo key is `lugha_demo_key`. It is shared and rate limited, "
+"so use it for trying things out and nothing else."
+msgstr ""
+"A chave pública de demonstração é `lugha_demo_key`. Ela é compartilhada "
+"e possui limite de requisições, portanto use-a apenas para testes e "
+"para nenhuma outra finalidade."
+
+#: ../../authentication.md:11
+msgid "Keep your key out of your code"
+msgstr "Mantenha sua chave fora do código"
+
+#: ../../authentication.md:13
+msgid "Read the key from an environment variable."
+msgstr "Leia a chave a partir de uma variável de ambiente."
+
+#: ../../authentication.md:21
+msgid "Three rules keep keys safe."
+msgstr "Três regras ajudam a manter as chaves seguras."
+
+#: ../../authentication.md:23
+msgid ""
+"Never commit a key to source control. Add any file that holds a key, such"
+" as `.env`, to `.gitignore`."
+msgstr ""
+"Nunca faça commit de uma chave no controle de versão. Adicione ao "
+"`.gitignore` qualquer arquivo que contenha uma chave, como `.env`."
+
+#: ../../authentication.md:24
+msgid ""
+"Never put a key in code that runs in a browser or a mobile app. Anyone "
+"can read it. Call the API from your own server instead."
+msgstr ""
+"Nunca coloque uma chave em código executado em um navegador ou aplicativo "
+"móvel. Qualquer pessoa pode lê-la. Em vez disso, chame a API a partir do "
+"seu próprio servidor."
+
+#: ../../authentication.md:25
+msgid ""
+"Never paste a key into a support message. Send the `request_id` from the "
+"error instead."
+msgstr ""
+"Nunca cole uma chave em uma mensagem para o suporte. Em vez disso, envie "
+"o `request_id` presente no erro."
+
+#: ../../authentication.md:27
+msgid "Rotate keys without downtime"
+msgstr "Faça a rotação das chaves sem indisponibilidade"
+
+#: ../../authentication.md:29
+msgid "The service accepts more than one key at a time. To rotate:"
+msgstr "O serviço aceita mais de uma chave ao mesmo tempo. Para fazer a rotação:"
+
+#: ../../authentication.md:31
+msgid "Add the new key alongside the old one."
+msgstr "Adicione a nova chave junto com a antiga."
+
+#: ../../authentication.md:32
+msgid "Deploy your applications with the new key."
+msgstr "Faça o deploy das suas aplicações usando a nova chave."
+
+#: ../../authentication.md:33
+msgid "Remove the old key once nothing uses it."
+msgstr "Remova a chave antiga quando nada mais a estiver usando."
+
+#: ../../authentication.md:35
+msgid "If a key leaks, remove it straight away and issue a new one."
+msgstr ""
+"Se uma chave for exposta, remova-a imediatamente e gere uma nova."
+
+#: ../../authentication.md:37
+msgid "Authentication errors"
+msgstr "Erros de autenticação"
+
+#: ../../authentication.md:39
+msgid "Both authentication failures return status `401`."
+msgstr "As duas falhas de autenticação retornam o status `401`."
+
+#: ../../authentication.md
+msgid "`type`"
+msgstr "`type`"
+
+#: ../../authentication.md
+msgid "Cause"
+msgstr "Causa"
+
+#: ../../authentication.md
+msgid "What to do"
+msgstr "O que fazer"
+
+#: ../../authentication.md
+msgid "`authentication_required`"
+msgstr "`authentication_required`"
+
+#: ../../authentication.md
+msgid "The `Authorization` header is missing, or it does not start with `Bearer`."
+msgstr ""
+"O cabeçalho `Authorization` está ausente ou não começa com `Bearer`."
+
+#: ../../authentication.md
+msgid "Add the header in the format above."
+msgstr "Adicione o cabeçalho no formato mostrado acima."
+
+#: ../../authentication.md
+msgid "`invalid_api_key`"
+msgstr "`invalid_api_key`"
+
+#: ../../authentication.md
+msgid "The header is well formed but the key is not recognised."
+msgstr "O cabeçalho está no formato correto, mas a chave não é reconhecida."
+
+#: ../../authentication.md
+msgid "Check for typos, extra spaces and expired keys."
+msgstr ""
+"Verifique erros de digitação, espaços extras e chaves expiradas."
+
+#: ../../authentication.md:46
+msgid "Do not retry a `401`. The same request will fail the same way."
+msgstr ""
+"Não tente novamente uma requisição que retorna `401`. A mesma requisição "
+"falhará da mesma maneira."

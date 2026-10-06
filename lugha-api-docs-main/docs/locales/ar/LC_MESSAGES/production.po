@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: 2026-09-29 09:16+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=n%100==0 ? 0 : n%100==1 ? 1 : n%100==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../production.md:1
+msgid "Production checklist"
+msgstr "قائمة التحقق للإنتاج"
+
+#: ../../production.md:3
+msgid ""
+"Work through this list before you ship. Each item comes from something "
+"that goes wrong in real integrations."
+msgstr ""
+"راجع هذه القائمة قبل نشر التطبيق. كل بند فيها مبني على مشكلة قد تحدث "
+"في عمليات التكامل الحقيقية."
+
+#: ../../production.md:5
+msgid "Before you deploy"
+msgstr "قبل النشر"
+
+#: ../../production.md:7
+msgid ""
+"Store API keys in environment variables or a secrets manager, never in "
+"source code."
+msgstr ""
+"خزّن مفاتيح API في environment variables أو secrets manager، وليس مطلقًا "
+"داخل source code."
+
+#: ../../production.md:8
+msgid ""
+"Never expose a key in a browser or mobile app. Call the API from your own"
+" server."
+msgstr ""
+"لا تكشف عن أي key داخل browser أو mobile app. استدعِ API من الخادم الخاص "
+"بك."
+
+#: ../../production.md:9
+msgid ""
+"Set a timeout on every request. Without one, a stalled connection can "
+"hang your application."
+msgstr ""
+"عيّن timeout لكل request. من دونه، قد يؤدي اتصال متوقف إلى تعليق "
+"التطبيق."
+
+#: ../../production.md:10
+msgid ""
+"Retry `429` and `500` responses and network failures. Do not retry other "
+"`4xx` errors."
+msgstr ""
+"أعد محاولة responses ذات الرمزين `429` و`500` وأخطاء الشبكة. لا تعاود "
+"محاولة أخطاء `4xx` الأخرى."
+
+#: ../../production.md:11
+msgid ""
+"Wait for `Retry-After` on a `429`, and use exponential backoff with a "
+"little random jitter for everything else."
+msgstr ""
+"انتظر قيمة `Retry-After` عند استلام `429`، واستخدم exponential backoff "
+"مع قدر صغير من random jitter لكل ما عدا ذلك."
+
+#: ../../production.md:12
+msgid "Log the `request_id` of every failed request so support can find it."
+msgstr ""
+"سجّل `request_id` لكل request فاشل حتى يتمكن فريق الدعم من العثور عليه."
+
+#: ../../production.md:13
+msgid "Do not log prompts or responses. They may contain personal data."
+msgstr ""
+"لا تسجّل prompts أو responses. فقد تحتوي على بيانات شخصية."
+
+#: ../../production.md:14
+msgid "Check `finish_reason`. A value of `length` means the response was cut off."
+msgstr ""
+"تحقق من `finish_reason`. تعني القيمة `length` أن response تم اقتطاعه."
+
+#: ../../production.md:15
+msgid "Record `usage.total_tokens` so you can see how much each feature uses."
+msgstr ""
+"سجّل `usage.total_tokens` حتى تتمكن من معرفة مقدار ما تستخدمه كل feature."
+
+#: ../../production.md:16
+msgid ""
+"Choose the `region` on purpose and confirm the `X-Data-Region` header "
+"matches what you expect."
+msgstr ""
+"اختر `region` عن قصد، وتأكد من أن header `X-Data-Region` يطابق ما تتوقعه."
+
+#: ../../production.md:17
+msgid ""
+"Handle `model_not_found`. Do not assume a model ID will exist forever. "
+"List models at startup if you can."
+msgstr ""
+"تعامل مع `model_not_found`. لا تفترض أن model ID سيظل موجودًا إلى الأبد. "
+"اعرض قائمة models عند بدء التشغيل إذا أمكن."
+
+#: ../../production.md:18
+msgid "Monitor how long requests take, and alert when they get slower."
+msgstr ""
+"راقب المدة التي تستغرقها requests، وأرسل تنبيهًا عندما تصبح أبطأ."
+
+#: ../../production.md:20
+msgid "A client that follows the list"
+msgstr "عميل يتبع القائمة"
+
+#: ../../production.md:22
+msgid ""
+"The repository includes a small Python client that covers the timeout, "
+"retry, backoff and logging items. This is its request method."
+msgstr ""
+"يتضمن repository عميل Python صغيرًا يغطي عناصر timeout وretry وbackoff "
+"وlogging. هذه هي request method الخاصة به."
+
+#: ../../production.md:29
+msgid "A few choices worth pointing out:"
+msgstr "بعض الخيارات التي تستحق الإشارة إليها:"
+
+#: ../../production.md:31
+msgid ""
+"It gives up straight away if the server asks for a wait longer than "
+"`max_retry_wait`. A request that blocks for a minute is usually worse "
+"than a clear failure."
+msgstr ""
+"يتوقف مباشرةً إذا طلب server الانتظار لمدة أطول من `max_retry_wait`. "
+"عادةً ما يكون request الذي يتوقف لمدة دقيقة أسوأ من فشل واضح."
+
+#: ../../production.md:32
+msgid ""
+"It logs the status, error type and request ID. It never logs the prompt "
+"or the response."
+msgstr ""
+"يسجّل status وerror type وrequest ID. ولا يسجّل prompt أو response مطلقًا."
+
+#: ../../production.md:33
+msgid ""
+"It only retries statuses in `RETRYABLE_STATUS`. A `400` will not succeed "
+"on a second attempt, so the client raises it at once."
+msgstr ""
+"يعيد المحاولة فقط للحالات الموجودة في `RETRYABLE_STATUS`. لن تنجح "
+"`400` عند المحاولة الثانية، لذلك يرفعها client مباشرةً."

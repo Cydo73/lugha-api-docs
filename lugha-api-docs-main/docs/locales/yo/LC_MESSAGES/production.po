@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: yo\n"
+"Language-Team: yo <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../production.md:1
+msgid "Production checklist"
+msgstr "Àkójọ ìṣàyẹ̀wò production"
+
+#: ../../production.md:3
+msgid ""
+"Work through this list before you ship. Each item comes from something "
+"that goes wrong in real integrations."
+msgstr ""
+"Ṣe àyẹ̀wò àkójọ yìí kí o tó tu ohun èlò náà jáde. Ohun kọ̀ọ̀kan nínú rẹ̀ "
+"wá láti inú ohun tí ó lè lọ níṣòro nínú integrations gidi."
+
+#: ../../production.md:5
+msgid "Before you deploy"
+msgstr "Ṣáájú deployment"
+
+#: ../../production.md:7
+msgid ""
+"Store API keys in environment variables or a secrets manager, never in "
+"source code."
+msgstr ""
+"Fi àwọn API keys pamọ́ sínú environment variables tàbí secrets manager, "
+"kò yẹ kí wọ́n wà nínú source code."
+
+#: ../../production.md:8
+msgid ""
+"Never expose a key in a browser or mobile app. Call the API from your own"
+" server."
+msgstr ""
+"Má ṣe fi key hàn rí nínú browser tàbí mobile app. Pe API náà láti inú "
+"server tirẹ."
+
+#: ../../production.md:9
+msgid ""
+"Set a timeout on every request. Without one, a stalled connection can "
+"hang your application."
+msgstr ""
+"Ṣètò timeout fún gbogbo request. Láìsí rẹ̀, connection tí ó dúró lè mú "
+"application rẹ dúró."
+
+#: ../../production.md:10
+msgid ""
+"Retry `429` and `500` responses and network failures. Do not retry other "
+"`4xx` errors."
+msgstr ""
+"Gbìyànjú `429` àti `500` responses àti network failures lẹ́ẹ̀kansi. "
+"Má ṣe gbìyànjú àwọn `4xx` errors mìíràn lẹ́ẹ̀kansi."
+
+#: ../../production.md:11
+msgid ""
+"Wait for `Retry-After` on a `429`, and use exponential backoff with a "
+"little random jitter for everything else."
+msgstr ""
+"Dúró de `Retry-After` lórí `429`, kí o sì lo exponential backoff pẹ̀lú "
+"random jitter díẹ̀ fún gbogbo ohun mìíràn."
+
+#: ../../production.md:12
+msgid "Log the `request_id` of every failed request so support can find it."
+msgstr ""
+"Ṣe log `request_id` ti gbogbo request tí ó kuna kí support lè rí i."
+
+#: ../../production.md:13
+msgid "Do not log prompts or responses. They may contain personal data."
+msgstr ""
+"Má ṣe log prompts tàbí responses. Wọ́n lè ní data ti ara ẹni nínú."
+
+#: ../../production.md:14
+msgid "Check `finish_reason`. A value of `length` means the response was cut off."
+msgstr ""
+"Ṣàyẹ̀wò `finish_reason`. Iye `length` túmọ̀ sí pé a gé response náà kúrò."
+
+#: ../../production.md:15
+msgid "Record `usage.total_tokens` so you can see how much each feature uses."
+msgstr ""
+"Ṣàkọsílẹ̀ `usage.total_tokens` kí o lè rí iye tí feature kọ̀ọ̀kan ń lò."
+
+#: ../../production.md:16
+msgid ""
+"Choose the `region` on purpose and confirm the `X-Data-Region` header "
+"matches what you expect."
+msgstr ""
+"Yan `region` pẹ̀lú ète, kí o sì jẹ́rìí pé header `X-Data-Region` bá ohun "
+"tí o retí mu."
+
+#: ../../production.md:17
+msgid ""
+"Handle `model_not_found`. Do not assume a model ID will exist forever. "
+"List models at startup if you can."
+msgstr ""
+"Ṣàkóso `model_not_found`. Má ṣe rò pé model ID kan yóò wà títí láé. "
+"Ṣàkójọ àwọn models nígbà tí eto bá bẹ̀rẹ̀ bí o bá lè ṣe bẹ́ẹ̀."
+
+#: ../../production.md:18
+msgid "Monitor how long requests take, and alert when they get slower."
+msgstr ""
+"Ṣàbójútó iye àkókò tí requests ń gba, kí o sì fi ìkìlọ̀ ránṣẹ́ nígbà tí "
+"wọ́n bá ń lọ́ra síi."
+
+#: ../../production.md:20
+msgid "A client that follows the list"
+msgstr "Client kan tí ó tẹ̀lé àkójọ náà"
+
+#: ../../production.md:22
+msgid ""
+"The repository includes a small Python client that covers the timeout, "
+"retry, backoff and logging items. This is its request method."
+msgstr ""
+"Repository náà ní Python client kékeré kan tí ó bo àwọn ohun tí ó kan "
+"timeout, retry, backoff àti logging. Èyí ni request method rẹ̀."
+
+#: ../../production.md:29
+msgid "A few choices worth pointing out:"
+msgstr "Àwọn ìpinnu díẹ̀ tí ó yẹ ká mẹ́nu kàn:"
+
+#: ../../production.md:31
+msgid ""
+"It gives up straight away if the server asks for a wait longer than "
+"`max_retry_wait`. A request that blocks for a minute is usually worse "
+"than a clear failure."
+msgstr ""
+"Ó máa ń dáwọ́ dúró lẹ́sẹ̀kẹsẹ̀ bí server bá béèrè fún ìdúró tó ju "
+"`max_retry_wait` lọ. Request tí ó dí fún ìṣẹ́jú kan sábà máa ń burú ju "
+"failure tí ó ṣe kedere lọ."
+
+#: ../../production.md:32
+msgid ""
+"It logs the status, error type and request ID. It never logs the prompt "
+"or the response."
+msgstr ""
+"Ó ń log status, error type àti request ID. Kò ṣe log prompt tàbí response "
+"rí."
+
+#: ../../production.md:33
+msgid ""
+"It only retries statuses in `RETRYABLE_STATUS`. A `400` will not succeed "
+"on a second attempt, so the client raises it at once."
+msgstr ""
+"Ó ń gbìyànjú lẹ́ẹ̀kansi fún àwọn statuses tó wà nínú "
+"`RETRYABLE_STATUS` nìkan. `400` kò ní ṣàṣeyọrí ní ìgbìyànjú kejì, "
+"nítorí náà client náà máa ń gbé e sókè lẹ́sẹ̀kẹsẹ̀."

@@ -1,0 +1,302 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: yo\n"
+"Language-Team: yo <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../quickstart.md:1
+msgid "Quickstart"
+msgstr "Ìbẹ̀rẹ̀ kíákíá"
+
+#: ../../quickstart.md:3
+msgid "Make your first request and read the response in about five minutes."
+msgstr "Ṣe request rẹ àkọ́kọ́ kí o sì ka response rẹ̀ ní nǹkan bí ìṣẹ́jú márùn-ún."
+
+#: ../../quickstart.md:5
+msgid ""
+"You need one of these on your machine: `curl`, Python 3.9 or later with "
+"the `requests` package, or Node.js 18 or later. Nothing else to install."
+msgstr ""
+"O nílò ọ̀kan lára àwọn wọ̀nyí lórí ẹ̀rọ rẹ: `curl`, Python 3.9 tàbí tuntun "
+"pẹ̀lú package `requests`, tàbí Node.js 18 tàbí tuntun. Kò sí ohun mìíràn "
+"tí o nílò láti fi sori ẹrọ."
+
+#: ../../quickstart.md:7
+msgid "1. Set your environment"
+msgstr "1. Ṣètò environment rẹ"
+
+#: ../../quickstart.md:9
+msgid ""
+"Your API key and the server address live in environment variables, so "
+"they never end up in your code."
+msgstr ""
+"API key rẹ àti àdírẹ́sì server wà nínú environment variables, kí wọn má bàa "
+"wá sí inú code rẹ láé."
+
+#: ../../quickstart.md:11
+msgid "The demo key below is public. It is limited to 10 requests per minute."
+msgstr ""
+"Demo key tó wà nísàlẹ̀ jẹ́ ti gbogbo ènìyàn. Ó ní ààlà requests mẹ́wàá fún ìṣẹ́jú kan."
+
+#: ../../quickstart.md:19
+msgid ""
+"If the demo server has been idle, the first request can take up to a "
+"minute to respond. Later requests are fast."
+msgstr ""
+"Tí demo server bá ti wà láìṣiṣẹ́ fún ìgbà díẹ̀, request àkọ́kọ́ lè gba tó "
+"ìṣẹ́jú kan kí ó tó dáhùn. Àwọn requests tó tẹ̀lé e máa ń yára."
+
+#: ../../quickstart.md:22
+msgid "2. Send your first request"
+msgstr "2. Rán request rẹ àkọ́kọ́"
+
+#: ../../quickstart.md:24
+msgid "Ask the large model a question. Pick the tab for your language."
+msgstr "Béèrè ìbéèrè lọ́wọ́ large model. Yan taabu fún èdè rẹ."
+
+#: ../../quickstart.md
+msgid "curl"
+msgstr "curl"
+
+#: ../../quickstart.md
+msgid "Python"
+msgstr "Python"
+
+#: ../../quickstart.md
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: ../../quickstart.md:49
+msgid "3. Read the response"
+msgstr "3. Ka response náà"
+
+#: ../../quickstart.md:51
+msgid ""
+"A successful request returns status `200` and a JSON body like this. Your"
+" `id` will differ."
+msgstr ""
+"Request tí ó ṣàṣeyọrí máa ń dá status `200` àti JSON body bí èyí padà. "
+"`id` rẹ yóò yàtọ̀."
+
+#: ../../quickstart.md:68
+msgid ""
+"The model is a stub, so `output` repeats your prompt inside a fixed "
+"sentence. That keeps every example on these pages reproducible. The shape"
+" of the response is what matters here."
+msgstr ""
+"Model náà jẹ́ stub, nítorí náà `output` máa ń tún prompt rẹ ṣe nínú gbolóhùn "
+"tí a ti ṣètò. Èyí ń jẹ́ kí gbogbo àpẹẹrẹ tó wà lórí àwọn ojúewé wọ̀nyí "
+"ṣeé tún ṣe. Àkópọ̀ response náà ni ohun tó ṣe pàtàkì níbí."
+
+#: ../../quickstart.md:70
+msgid "`id`"
+msgstr "`id`"
+
+#: ../../quickstart.md:71
+msgid ""
+"A unique ID for this generation. Log it if you need to refer to the "
+"generation later."
+msgstr ""
+"ID aláìlẹ́gbẹ́ fún generation yìí. Ṣe log rẹ̀ tí o bá nílò láti tọ́ka sí "
+"generation náà lẹ́yìn náà."
+
+#: ../../quickstart.md:73
+msgid "`model`"
+msgstr "`model`"
+
+#: ../../quickstart.md:74
+msgid "The model that handled the request."
+msgstr "Model tó bójú tó request náà."
+
+#: ../../quickstart.md:76
+msgid "`language`"
+msgstr "`language`"
+
+#: ../../quickstart.md:77
+msgid "The language code you sent. If you leave it out, it defaults to `en`."
+msgstr ""
+"Language code tí o rán. Tí o bá fi sílẹ̀, iye àkọ́kọ́ rẹ̀ yóò jẹ́ `en`."
+
+#: ../../quickstart.md:79
+msgid "`output`"
+msgstr "`output`"
+
+#: ../../quickstart.md:80
+msgid "The generated text."
+msgstr "Ọ̀rọ̀ tí a ṣe jáde."
+
+#: ../../quickstart.md:82
+msgid "`finish_reason`"
+msgstr "`finish_reason`"
+
+#: ../../quickstart.md:83
+msgid ""
+"Why the response ended. `stop` means it finished naturally. `length` "
+"means it hit your `max_tokens` limit and was cut off."
+msgstr ""
+"Ìdí tí response fi parí. `stop` túmọ̀ sí pé ó parí lọ́nà àdáyébá. `length` "
+"túmọ̀ sí pé ó dé ààlà `max_tokens` rẹ̀ tí a sì gé e kúrò."
+
+#: ../../quickstart.md:85
+msgid "`usage`"
+msgstr "`usage`"
+
+#: ../../quickstart.md:86
+msgid ""
+"How many tokens the request used. `total_tokens` is `prompt_tokens` plus "
+"`completion_tokens`. See [Tokens and languages](tokens.md) for how tokens"
+" are counted."
+msgstr ""
+"Iye tokens tí request náà lò. `total_tokens` jẹ́ `prompt_tokens` àti "
+"`completion_tokens` papọ̀. Wo [Tokens and languages](tokens.md) láti mọ "
+"bí a ṣe ń ka tokens."
+
+#: ../../quickstart.md:88
+msgid "When the response is cut off"
+msgstr "Nígbà tí a bá gé response kúrò"
+
+#: ../../quickstart.md:90
+msgid ""
+"Set `max_tokens` to 10 and send the same prompt. The output stops early "
+"and `finish_reason` changes to `length`."
+msgstr ""
+"Ṣètò `max_tokens` sí 10 kí o sì rán prompt kan náà. Output yóò dáwọ́ dúró "
+"ní kùtùkùtù, `finish_reason` yóò sì yí padà sí `length`."
+
+#: ../../quickstart.md:107
+msgid ""
+"If you see `length` and you expected a full answer, raise `max_tokens`. "
+"Each model has its own ceiling, listed under `max_output_tokens` in the "
+"[model list](#choose-a-model-and-language)."
+msgstr ""
+"Tí o bá rí `length` tí o sì ń retí ìdáhùn pípé, gbé `max_tokens` sókè. "
+"Model kọ̀ọ̀kan ní ààlà tirẹ̀, èyí tí a ṣe àkójọ lábẹ́ `max_output_tokens` "
+"ní [model list](#choose-a-model-and-language)."
+
+#: ../../quickstart.md:109
+msgid "Response headers"
+msgstr "Response headers"
+
+#: ../../quickstart.md:111
+msgid "Every response carries headers worth knowing about."
+msgstr "Gbogbo response ní àwọn headers tí ó yẹ kí o mọ̀ nípa wọn."
+
+#: ../../quickstart.md:43
+msgid "Header"
+msgstr "Header"
+
+#: ../../quickstart.md:43
+msgid "Meaning"
+msgstr "Ìtumọ̀"
+
+#: ../../quickstart.md:43
+msgid "`X-Request-ID`"
+msgstr "`X-Request-ID`"
+
+#: ../../quickstart.md:43
+msgid "Unique ID for this request. Quote it when you contact support."
+msgstr ""
+"ID aláìlẹ́gbẹ́ fún request yìí. Tọ́ka sí i nígbà tí o bá kàn sí support."
+
+#: ../../quickstart.md:43
+msgid "`X-Data-Region`"
+msgstr "`X-Data-Region`"
+
+#: ../../quickstart.md:43
+msgid "The region that processed the request. Only on `/v1/generate`."
+msgstr ""
+"Region tó ṣe request náà. Ó wà lórí `/v1/generate` nìkan."
+
+#: ../../quickstart.md:43
+msgid "`X-RateLimit-Limit`"
+msgstr "`X-RateLimit-Limit`"
+
+#: ../../quickstart.md:43
+msgid "How many requests you get per minute."
+msgstr "Iye requests tí o lè ṣe fún ìṣẹ́jú kan."
+
+#: ../../quickstart.md:43
+msgid "`X-RateLimit-Remaining`"
+msgstr "`X-RateLimit-Remaining`"
+
+#: ../../quickstart.md:43
+msgid "How many you have left in the current minute."
+msgstr "Iye requests tó kù fún ọ nínú ìṣẹ́jú tó wà lọ́wọ́."
+
+#: ../../quickstart.md:43
+msgid "`X-RateLimit-Reset`"
+msgstr "`X-RateLimit-Reset`"
+
+#: ../../quickstart.md:43
+msgid "Seconds until the counter resets."
+msgstr "Iṣẹ́jú-aaya mélòó kan ló kù kí counter tún bẹ̀rẹ̀."
+
+#: ../../quickstart.md:121
+msgid "Choose a model and language"
+msgstr "Yan model àti èdè"
+
+#: ../../quickstart.md:123
+msgid "List the models to see which languages each one accepts."
+msgstr "Ṣe àkójọ models láti rí àwọn èdè tí ọkọ̀ọ̀kan gba."
+
+#: ../../quickstart.md:146
+msgid ""
+"The language codes are `en` English, `sw` Swahili, `ha` Hausa, `yo` "
+"Yoruba, `lg` Luganda and `am` Amharic. If you send a language the model "
+"does not support, you get an `unsupported_language` error that lists the "
+"ones it does. See [Errors](errors.md)."
+msgstr ""
+"Àwọn language codes ni `en` English, `sw` Swahili, `ha` Hausa, `yo` Yoruba, "
+"`lg` Luganda àti `am` Amharic. Tí o bá rán èdè tí model kò ṣe àtìlẹ́yìn fún, "
+"o máa gba error `unsupported_language` tí ó ṣe àkójọ àwọn èdè tí ó ń ṣe "
+"àtìlẹ́yìn fún. Wo [Errors](errors.md)."
+
+#: ../../quickstart.md:148
+msgid "Choose a region"
+msgstr "Yan region"
+
+#: ../../quickstart.md:150
+msgid ""
+"The `region` parameter tells the service where to process your request. "
+"Use `ke` for Kenya, `ug` for Uganda, `ma` for Morocco or `mu` for "
+"Mauritius. If you leave it out, the default is `ke`. The `X-Data-Region` "
+"response header confirms where the request ran."
+msgstr ""
+"Parameter `region` ń sọ fún service ibi tí ó yẹ kí ó ṣe request rẹ. "
+"Lo `ke` fún Kenya, `ug` fún Uganda, `ma` fún Morocco tàbí `mu` fún "
+"Mauritius. Tí o bá fi sílẹ̀, ààyè àkọ́kọ́ jẹ́ `ke`. Response header "
+"`X-Data-Region` máa ń jẹ́rìí ibi tí request náà ti ṣiṣẹ́."
+
+#: ../../quickstart.md:152
+msgid "Next steps"
+msgstr "Àwọn ìgbésẹ̀ tó kàn"
+
+#: ../../quickstart.md:154
+msgid "[Authentication](authentication.md) explains keys in more detail."
+msgstr "[Authentication](authentication.md) ṣàlàyé keys ní kíkún síi."
+
+#: ../../quickstart.md:155
+msgid "[Errors](errors.md) covers every error and which ones to retry."
+msgstr "[Errors](errors.md) bo gbogbo errors àti àwọn tí o yẹ kí o gbìyànjú lẹ́ẹ̀kansi."
+
+#: ../../quickstart.md:156
+msgid "[Production checklist](production.md) is what to review before you ship."
+msgstr ""
+"[Production checklist](production.md) ni ohun tí o yẹ kí o ṣàyẹ̀wò kí o tó "
+"tu ohun èlò náà jáde."

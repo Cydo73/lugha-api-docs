@@ -1,0 +1,314 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: sw\n"
+"Language-Team: sw <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../errors.md:1
+msgid "Errors"
+msgstr "Makosa"
+
+#: ../../errors.md:3
+msgid ""
+"When a request fails, the response body always has the same shape, "
+"whatever went wrong."
+msgstr ""
+"Wakati ombi linaposhindwa, mwili wa jibu huwa na muundo uleule kila mara, "
+"bila kujali kilichosababisha hitilafu."
+
+#: ../../errors.md ../../errors.md:15
+msgid "`type`"
+msgstr "`type`"
+
+#: ../../errors.md:16
+msgid "A machine readable category. Branch your code on this value."
+msgstr "Aina inayoweza kusomeka na mashine. Tumia thamani hii kuelekeza msimbo wako."
+
+#: ../../errors.md:18
+msgid "`message`"
+msgstr "`message`"
+
+#: ../../errors.md:19
+msgid ""
+"A plain explanation for humans. Show it in logs, but do not parse it. The"
+" wording can change."
+msgstr ""
+"Maelezo rahisi kwa ajili ya watu. Yaonyeshe kwenye kumbukumbu za mfumo, "
+"lakini usiyachanganue. Maneno yanaweza kubadilika."
+
+#: ../../errors.md:21
+msgid "`request_id`"
+msgstr "`request_id`"
+
+#: ../../errors.md:22
+msgid ""
+"The ID of this request. It is also in the `X-Request-ID` response header."
+" Quote it when you contact support, and never send your API key."
+msgstr ""
+"Kitambulisho cha ombi hili. Pia kinapatikana kwenye kichwa cha jibu "
+"`X-Request-ID`. Kitaje unapowasiliana na usaidizi, na usiwahi kutuma ufunguo wako wa API."
+
+#: ../../errors.md:24
+msgid "Error types"
+msgstr "Aina za makosa"
+
+#: ../../errors.md
+msgid "Status"
+msgstr "Hali"
+
+#: ../../errors.md
+msgid "What it means"
+msgstr "Maana yake"
+
+#: ../../errors.md
+msgid "Retry?"
+msgstr "Jaribu tena?"
+
+#: ../../errors.md
+msgid "`authentication_required`"
+msgstr "`authentication_required`"
+
+#: ../../errors.md
+msgid "401"
+msgstr "401"
+
+#: ../../errors.md
+msgid "The `Authorization` header is missing or malformed."
+msgstr "Kichwa cha `Authorization` hakipo au kimeundwa vibaya."
+
+#: ../../errors.md
+msgid "No"
+msgstr "Hapana"
+
+#: ../../errors.md
+msgid "`invalid_api_key`"
+msgstr "`invalid_api_key`"
+
+#: ../../errors.md
+msgid "The key is not recognised."
+msgstr "Ufunguo hautambuliki."
+
+#: ../../errors.md
+msgid "`invalid_request`"
+msgstr "`invalid_request`"
+
+#: ../../errors.md
+msgid "400"
+msgstr "400"
+
+#: ../../errors.md
+msgid "A field is missing or has a bad value. The message names the field."
+msgstr "Sehemu haipo au ina thamani isiyo sahihi. Ujumbe unaonyesha sehemu hiyo."
+
+#: ../../errors.md
+msgid "`unsupported_language`"
+msgstr "`unsupported_language`"
+
+#: ../../errors.md
+msgid ""
+"The model does not support this language. The message lists the ones it "
+"does."
+msgstr ""
+"Modeli haitumii lugha hii. Ujumbe unaorodhesha lugha ambazo inazotumia."
+
+#: ../../errors.md
+msgid "`unsupported_region`"
+msgstr "`unsupported_region`"
+
+#: ../../errors.md
+msgid "The region is not one of `ke`, `ug`, `ma` or `mu`."
+msgstr "Eneo si mojawapo ya `ke`, `ug`, `ma` au `mu`."
+
+#: ../../errors.md
+msgid "`model_not_found`"
+msgstr "`model_not_found`"
+
+#: ../../errors.md
+msgid "404"
+msgstr "404"
+
+#: ../../errors.md
+msgid "There is no model with that ID. List models with `GET /v1/models`."
+msgstr "Hakuna modeli yenye kitambulisho hicho. Orodhesha modeli kwa kutumia `GET /v1/models`."
+
+#: ../../errors.md
+msgid "`not_found`"
+msgstr "`not_found`"
+
+#: ../../errors.md
+msgid "There is no endpoint at that path."
+msgstr "Hakuna endpoint kwenye njia hiyo."
+
+#: ../../errors.md
+msgid "`method_not_allowed`"
+msgstr "`method_not_allowed`"
+
+#: ../../errors.md
+msgid "405"
+msgstr "405"
+
+#: ../../errors.md
+msgid "The endpoint does not accept that HTTP method."
+msgstr "Endpoint haikubali njia hiyo ya HTTP."
+
+#: ../../errors.md
+msgid "`rate_limit_exceeded`"
+msgstr "`rate_limit_exceeded`"
+
+#: ../../errors.md
+msgid "429"
+msgstr "429"
+
+#: ../../errors.md
+msgid "You used all your requests for this minute."
+msgstr "Umetumia maombi yako yote kwa dakika hii."
+
+#: ../../errors.md
+msgid "Yes, after `Retry-After`"
+msgstr "Ndiyo, baada ya `Retry-After`"
+
+#: ../../errors.md
+msgid "`internal_error`"
+msgstr "`internal_error`"
+
+#: ../../errors.md
+msgid "500"
+msgstr "500"
+
+#: ../../errors.md
+msgid "Something went wrong on the service side."
+msgstr "Hitilafu imetokea upande wa huduma."
+
+#: ../../errors.md
+msgid "Yes, with backoff"
+msgstr "Ndiyo, kwa kusubiri kwa muda unaoongezeka"
+
+#: ../../errors.md:39
+msgid ""
+"A `400`, `401`, `404` or `405` means the request itself needs to change. "
+"Sending it again unchanged will fail again."
+msgstr ""
+"`400`, `401`, `404` au `405` inamaanisha kuwa ombi lenyewe linahitaji "
+"kubadilishwa. Kulituma tena bila kulibadilisha kutashindikana tena."
+
+#: ../../errors.md:41
+msgid "Examples"
+msgstr "Mifano"
+
+#: ../../errors.md:43
+msgid "A model that does not support the language you asked for:"
+msgstr "Modeli ambayo haitumii lugha uliyoomba:"
+
+#: ../../errors.md:55
+msgid ""
+"The fix is in the message. Use a model that supports the language, or "
+"choose one of the listed languages."
+msgstr ""
+"Suluhisho liko kwenye ujumbe. Tumia modeli inayotumia lugha hiyo, au "
+"chagua mojawapo ya lugha zilizoorodheshwa."
+
+#: ../../errors.md:57
+msgid "Rate limits"
+msgstr "Vikomo vya matumizi"
+
+#: ../../errors.md:59
+msgid ""
+"Each API key can make 10 requests per minute. The count resets at the "
+"start of each minute. Every response tells you where you stand."
+msgstr ""
+"Kila ufunguo wa API unaweza kufanya maombi 10 kwa dakika. Hesabu huanza "
+"upya mwanzoni mwa kila dakika. Kila jibu linakuonyesha hali ya matumizi yako."
+
+#: ../../errors.md
+msgid "Header"
+msgstr "Kichwa"
+
+#: ../../errors.md
+msgid "Meaning"
+msgstr "Maana"
+
+#: ../../errors.md
+msgid "`X-RateLimit-Limit`"
+msgstr "`X-RateLimit-Limit`"
+
+#: ../../errors.md
+msgid "Requests allowed per minute."
+msgstr "Idadi ya maombi yanayoruhusiwa kwa dakika."
+
+#: ../../errors.md
+msgid "`X-RateLimit-Remaining`"
+msgstr "`X-RateLimit-Remaining`"
+
+#: ../../errors.md
+msgid "Requests left in the current minute."
+msgstr "Maombi yaliyosalia katika dakika ya sasa."
+
+#: ../../errors.md
+msgid "`X-RateLimit-Reset`"
+msgstr "`X-RateLimit-Reset`"
+
+#: ../../errors.md
+msgid "Seconds until the count resets."
+msgstr "Sekunde kabla ya hesabu kuanza upya."
+
+#: ../../errors.md:67
+msgid ""
+"When you use up your requests, the next one returns status `429` with a "
+"`Retry-After` header."
+msgstr ""
+"Unapotumia maombi yako yote, ombi linalofuata linarudisha hali `429` "
+"pamoja na kichwa `Retry-After`."
+
+#: ../../errors.md:88
+msgid ""
+"Wait for the number of seconds in `Retry-After`, then send the request "
+"again. Retrying straight away only uses up more of your allowance."
+msgstr ""
+"Subiri idadi ya sekunde iliyo kwenye `Retry-After`, kisha tuma ombi tena. "
+"Kujaribu tena mara moja hutumia zaidi ya kiwango chako cha matumizi."
+
+#: ../../errors.md:90
+msgid ""
+"If you see `429` often, slow your requests down. Watch `X-RateLimit-"
+"Remaining` and pause before it reaches zero."
+msgstr ""
+"Ukiona `429` mara nyingi, punguza kasi ya maombi yako. Fuatilia "
+"`X-RateLimit-Remaining` na simamisha maombi kabla haijafikia sifuri."
+
+#: ../../errors.md:92
+msgid "What to retry"
+msgstr "Cha kujaribu tena"
+
+#: ../../errors.md:94
+msgid ""
+"Retry `429` after the `Retry-After` delay. Retry `500` and network "
+"failures with exponential backoff, which means waiting a little longer "
+"after each failed attempt. Never retry the other errors."
+msgstr ""
+"Jaribu tena `429` baada ya muda wa `Retry-After`. Jaribu tena `500` na "
+"makosa ya mtandao kwa kusubiri kwa muda unaoongezeka, yaani kusubiri muda "
+"mrefu zaidi baada ya kila jaribio lililoshindikana. Usijaribu tena makosa mengine."
+
+#: ../../errors.md:96
+msgid ""
+"The [production checklist](production.md) includes a client that does all"
+" of this."
+msgstr ""
+"[Orodha ya ukaguzi wa production](production.md) ina client inayofanya "
+"yote haya."

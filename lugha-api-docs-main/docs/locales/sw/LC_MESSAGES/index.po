@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: 2026-09-29 09:16+0300\n"
+"Last-Translator: \n"
+"Language: sw\n"
+"Language-Team: Swahili\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../index.md:1
+msgid "Lugha Reference API"
+msgstr "API ya Marejeleo ya Lugha"
+
+#: ../../index.md:3
+msgid ""
+"Lugha is a small text generation API that supports African languages. Use"
+" it to generate text, count tokens before you send a request, and choose "
+"the region that processes your data."
+msgstr ""
+"Lugha ni API ndogo ya kutengeneza maandishi inayotumia lugha za Afrika. "
+"Itumie kutengeneza maandishi, kuhesabu tokeni kabla ya kutuma ombi, na "
+"kuchagua eneo linalochakata data yako."
+
+#: ../../index.md:5
+msgid "Independent documentation exercise"
+msgstr "Zoezi huru la uwekaji wa nyaraka"
+
+#: ../../index.md:8
+msgid ""
+"Lugha is not a real product. It is a reference API written to show how I "
+"document an AI inference service for developers. The model is a stub that"
+" returns predictable text, so every example on these pages runs and "
+"returns exactly what is shown."
+msgstr ""
+"Lugha si bidhaa halisi. Ni API ya marejeleo iliyoandikwa kuonyesha jinsi "
+"ninavyoandika nyaraka za huduma ya uelekezaji wa AI kwa wasanidi programu. "
+"Muundo huu ni stub unaorudisha maandishi yanayotabirika, hivyo kila mfano "
+"kwenye kurasa hizi huendeshwa na kurudisha kile kinachoonyeshwa."
+
+#: ../../index.md:11
+msgid "Start here"
+msgstr "Anza hapa"
+
+#: ../../index.md:16
+msgid "Quickstart"
+msgstr "Mwanzo wa haraka"
+
+#: ../../index.md:20
+msgid "Make your first request in about five minutes."
+msgstr "Tuma ombi lako la kwanza ndani ya takribani dakika tano."
+
+#: ../../index.md:23
+msgid "Handle errors"
+msgstr "Shughulikia hitilafu"
+
+#: ../../index.md:27
+msgid ""
+"Every error has a type, a message and a request ID. Learn what to do with"
+" each one."
+msgstr ""
+"Kila hitilafu ina aina, ujumbe na kitambulisho cha ombi. Jifunze cha kufanya "
+"kwa kila mojawapo."
+
+#: ../../index.md:30
+msgid "Go to production"
+msgstr "Nenda kwenye uzalishaji"
+
+#: ../../index.md:34
+msgid "A checklist to work through before you ship."
+msgstr "Orodha ya ukaguzi ya kufuata kabla ya kuchapisha."
+
+#: ../../index.md:37
+msgid "API reference"
+msgstr "Marejeleo ya API"
+
+#: ../../index.md:41
+msgid "Every endpoint, parameter and response."
+msgstr "Kila endpoint, kigezo na jibu."

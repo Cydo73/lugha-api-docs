@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: 2026-09-29 09:16+0300\n"
+"Last-Translator: \n"
+"Language: pt\n"
+"Language-Team: Portuguese\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../index.md:1
+msgid "Lugha Reference API"
+msgstr "API de Referência do Lugha"
+
+#: ../../index.md:3
+msgid ""
+"Lugha is a small text generation API that supports African languages. Use"
+" it to generate text, count tokens before you send a request, and choose "
+"the region that processes your data."
+msgstr ""
+"Lugha é uma pequena API de geração de texto que oferece suporte a línguas "
+"africanas. Use-a para gerar texto, contar tokens antes de enviar uma "
+"requisição e escolher a região que processa os seus dados."
+
+#: ../../index.md:5
+msgid "Independent documentation exercise"
+msgstr "Exercício independente de documentação"
+
+#: ../../index.md:8
+msgid ""
+"Lugha is not a real product. It is a reference API written to show how I "
+"document an AI inference service for developers. The model is a stub that"
+" returns predictable text, so every example on these pages runs and "
+"returns exactly what is shown."
+msgstr ""
+"Lugha não é um produto real. É uma API de referência criada para mostrar "
+"como documento um serviço de inferência de IA para desenvolvedores. O "
+"modelo é um stub que retorna texto previsível, portanto, cada exemplo "
+"nestas páginas é executado e retorna exatamente o que é apresentado."
+
+#: ../../index.md:11
+msgid "Start here"
+msgstr "Comece aqui"
+
+#: ../../index.md:16
+msgid "Quickstart"
+msgstr "Início rápido"
+
+#: ../../index.md:20
+msgid "Make your first request in about five minutes."
+msgstr "Faça sua primeira requisição em cerca de cinco minutos."
+
+#: ../../index.md:23
+msgid "Handle errors"
+msgstr "Lidar com erros"
+
+#: ../../index.md:27
+msgid ""
+"Every error has a type, a message and a request ID. Learn what to do with"
+" each one."
+msgstr ""
+"Cada erro possui um tipo, uma mensagem e um ID de requisição. Saiba o que "
+"fazer com cada um deles."
+
+#: ../../index.md:30
+msgid "Go to production"
+msgstr "Ir para produção"
+
+#: ../../index.md:34
+msgid "A checklist to work through before you ship."
+msgstr "Uma lista de verificação para seguir antes de publicar."
+
+#: ../../index.md:37
+msgid "API reference"
+msgstr "Referência da API"
+
+#: ../../index.md:41
+msgid "Every endpoint, parameter and response."
+msgstr "Cada endpoint, parâmetro e resposta."

@@ -1,0 +1,180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../documentation-decisions.md:1
+msgid "Documentation decisions"
+msgstr "Décisions de documentation"
+
+#: ../../documentation-decisions.md:3
+msgid ""
+"I wrote these pages as a sample of how I document an API for developers. "
+"This page explains the choices, so you can judge my thinking as well as "
+"my writing."
+msgstr ""
+"J’ai rédigé ces pages comme exemple de la manière dont je documente une API "
+"pour les développeurs. Cette page explique mes choix afin que vous puissiez "
+"évaluer aussi bien ma réflexion que ma rédaction."
+
+#: ../../documentation-decisions.md:5
+msgid "Why the quickstart comes first"
+msgstr "Pourquoi le guide de démarrage rapide vient en premier"
+
+#: ../../documentation-decisions.md:7
+msgid ""
+"Someone evaluating an API wants proof that it works before they read "
+"anything else. The quickstart gets a real request running in a few "
+"minutes, then explains every field in the response. Every other page "
+"links back to it."
+msgstr ""
+"Une personne qui évalue une API veut vérifier qu’elle fonctionne avant de "
+"lire quoi que ce soit d’autre. Le guide de démarrage rapide permet d’exécuter "
+"une véritable requête en quelques minutes, puis explique chaque champ de la "
+"réponse. Toutes les autres pages y renvoient."
+
+#: ../../documentation-decisions.md:9
+msgid "Why the examples are real files"
+msgstr "Pourquoi les exemples sont de vrais fichiers"
+
+#: ../../documentation-decisions.md:11
+msgid ""
+"The code on these pages is pulled straight from the `examples` folder. I "
+"ran each one against the running service: curl, Python and JavaScript. "
+"The docs show exactly the code that ran, and there is no second copy to "
+"go stale. Sample code that drifts away from the docs is one of the most "
+"common ways developer documentation stops being trusted."
+msgstr ""
+"Le code présenté sur ces pages provient directement du dossier `examples`. "
+"J’ai exécuté chacun des exemples avec le service en cours d’exécution : "
+"curl, Python et JavaScript. La documentation montre exactement le code "
+"qui a été exécuté, sans seconde copie susceptible de devenir obsolète. "
+"Un exemple de code qui diverge de la documentation est l’une des façons "
+"les plus courantes par lesquelles la documentation destinée aux développeurs "
+"perd leur confiance."
+
+#: ../../documentation-decisions.md:13
+msgid "Why errors get their own page"
+msgstr "Pourquoi les erreurs ont leur propre page"
+
+#: ../../documentation-decisions.md:15
+msgid ""
+"Errors are where developers spend most of their debugging time. Every "
+"failure uses one shape, with a `type` to branch on, a `message` for "
+"people and a `request_id` for support. The table says which errors are "
+"worth retrying, because that is the question a developer actually has at "
+"that moment."
+msgstr ""
+"Les erreurs sont l’un des principaux endroits où les développeurs passent "
+"leur temps de débogage. Chaque échec utilise la même structure, avec un "
+"`type` permettant de déterminer le traitement à effectuer, un `message` "
+"destiné aux utilisateurs et un `request_id` pour le support. Le tableau "
+"indique quelles erreurs peuvent justifier une nouvelle tentative, car c’est "
+"la question qu’un développeur se pose réellement à ce moment-là."
+
+#: ../../documentation-decisions.md:17
+msgid "Why the reference is generated"
+msgstr "Pourquoi la référence est générée automatiquement"
+
+#: ../../documentation-decisions.md:19
+msgid ""
+"The API reference comes from `openapi/openapi.yaml`, and that file is "
+"exported from the service code. The continuous integration check fails if"
+" the file is out of date. I would rather explain the API in prose and let"
+" a tool list the parameters, because copying parameters by hand is how "
+"references end up wrong."
+msgstr ""
+"La référence de l’API provient de `openapi/openapi.yaml`, et ce fichier est "
+"généré à partir du code du service. La vérification d’intégration continue "
+"échoue si le fichier n’est pas à jour. Je préfère expliquer l’API en prose "
+"et laisser un outil répertorier les paramètres, car copier les paramètres "
+"manuellement est l’une des principales causes d’erreurs dans les références."
+
+#: ../../documentation-decisions.md:21
+msgid "Why the model is a stub"
+msgstr "Pourquoi le modèle est un stub"
+
+#: ../../documentation-decisions.md:23
+msgid ""
+"I do not have a real model, and inventing behaviour I cannot verify would"
+" make these docs untrustworthy. The stub returns predictable text, so "
+"every response on these pages is exactly what you get if you run the "
+"request. The tokenizer is simple for the same reason, and the tokens page"
+" says so plainly."
+msgstr ""
+"Je ne dispose pas d’un véritable modèle, et inventer un comportement que "
+"je ne peux pas vérifier rendrait cette documentation peu fiable. Le stub "
+"renvoie un texte prévisible, de sorte que chaque réponse présentée sur ces "
+"pages correspond exactement à ce que vous obtenez lorsque vous exécutez la "
+"requête. Le tokenizer est simple pour la même raison, et la page consacrée "
+"aux tokens l’indique clairement."
+
+#: ../../documentation-decisions.md:25
+msgid "Why tokens and regions get attention"
+msgstr "Pourquoi les tokens et les régions sont mis en avant"
+
+#: ../../documentation-decisions.md:27
+msgid ""
+"For developers building in African languages, two questions come up "
+"early: how many tokens their text will use, and where their data is "
+"processed. I added a token counting endpoint and a `region` parameter to "
+"give those questions a place in the documentation. They are illustrative "
+"design choices for this sample, not claims about any real service."
+msgstr ""
+"Pour les développeurs qui travaillent avec des langues africaines, deux "
+"questions se posent rapidement : combien de tokens leur texte utilisera et "
+"où leurs données seront traitées. J’ai ajouté un endpoint de comptage des "
+"tokens et un paramètre `region` afin d’apporter une réponse à ces questions "
+"dans la documentation. Il s’agit de choix de conception illustratifs pour "
+"cet exemple, et non d’affirmations concernant un service réel."
+
+#: ../../documentation-decisions.md:29
+msgid "What I left out on purpose"
+msgstr "Ce que j’ai volontairement laissé de côté"
+
+#: ../../documentation-decisions.md:31
+msgid ""
+"I left out streaming, official SDK packages, billing and pagination. A "
+"small set of pages done properly is more useful than a large set done "
+"quickly. Streaming would be my next addition, because it changes what a "
+"quickstart looks like."
+msgstr ""
+"J’ai volontairement laissé de côté le streaming, les packages SDK officiels, "
+"la facturation et la pagination. Un petit ensemble de pages bien réalisées "
+"est plus utile qu’un grand ensemble produit rapidement. Le streaming serait "
+"mon prochain ajout, car il modifie la manière dont se présente un guide de "
+"démarrage rapide."
+
+#: ../../documentation-decisions.md:33
+msgid "What I would do with a real product"
+msgstr "Ce que je ferais avec un produit réel"
+
+#: ../../documentation-decisions.md:35
+msgid ""
+"I would sit with the engineers and read the code before writing a word. I"
+" would run every example myself, and I would use support tickets and "
+"usage data to decide what to document first. I would also keep a "
+"changelog, so developers can see what changed between versions."
+msgstr ""
+"Je travaillerais avec les ingénieurs et lirais le code avant d’écrire le "
+"moindre mot. J’exécuterais moi-même chaque exemple et j’utiliserais les "
+"tickets de support ainsi que les données d’utilisation pour décider de ce "
+"qu’il faut documenter en priorité. Je tiendrais également un changelog afin "
+"que les développeurs puissent voir ce qui a changé entre les versions."

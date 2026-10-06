@@ -1,0 +1,305 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt\n"
+"Language-Team: pt <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../quickstart.md:1
+msgid "Quickstart"
+msgstr "Início rápido"
+
+#: ../../quickstart.md:3
+msgid "Make your first request and read the response in about five minutes."
+msgstr "Faça sua primeira requisição e leia a resposta em cerca de cinco minutos."
+
+#: ../../quickstart.md:5
+msgid ""
+"You need one of these on your machine: `curl`, Python 3.9 or later with "
+"the `requests` package, or Node.js 18 or later. Nothing else to install."
+msgstr ""
+"Você precisa de uma destas opções na sua máquina: `curl`, Python 3.9 ou "
+"posterior com o pacote `requests`, ou Node.js 18 ou posterior. Não é "
+"necessário instalar mais nada."
+
+#: ../../quickstart.md:7
+msgid "1. Set your environment"
+msgstr "1. Configure seu ambiente"
+
+#: ../../quickstart.md:9
+msgid ""
+"Your API key and the server address live in environment variables, so "
+"they never end up in your code."
+msgstr ""
+"Sua chave de API e o endereço do servidor ficam em variáveis de ambiente, "
+"para que nunca acabem no seu código."
+
+#: ../../quickstart.md:11
+msgid "The demo key below is public. It is limited to 10 requests per minute."
+msgstr ""
+"A chave de demonstração abaixo é pública. Ela é limitada a 10 requisições "
+"por minuto."
+
+#: ../../quickstart.md:19
+msgid ""
+"If the demo server has been idle, the first request can take up to a "
+"minute to respond. Later requests are fast."
+msgstr ""
+"Se o servidor de demonstração estiver ocioso, a primeira requisição pode "
+"levar até um minuto para responder. As requisições seguintes são rápidas."
+
+#: ../../quickstart.md:22
+msgid "2. Send your first request"
+msgstr "2. Envie sua primeira requisição"
+
+#: ../../quickstart.md:24
+msgid "Ask the large model a question. Pick the tab for your language."
+msgstr ""
+"Faça uma pergunta ao modelo grande. Selecione a aba correspondente ao seu idioma."
+
+#: ../../quickstart.md
+msgid "curl"
+msgstr "curl"
+
+#: ../../quickstart.md
+msgid "Python"
+msgstr "Python"
+
+#: ../../quickstart.md
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: ../../quickstart.md:49
+msgid "3. Read the response"
+msgstr "3. Leia a resposta"
+
+#: ../../quickstart.md:51
+msgid ""
+"A successful request returns status `200` and a JSON body like this. Your"
+" `id` will differ."
+msgstr ""
+"Uma requisição bem-sucedida retorna o status `200` e um corpo JSON como "
+"este. Seu `id` será diferente."
+
+#: ../../quickstart.md:68
+msgid ""
+"The model is a stub, so `output` repeats your prompt inside a fixed "
+"sentence. That keeps every example on these pages reproducible. The shape"
+" of the response is what matters here."
+msgstr ""
+"O modelo é um stub, então `output` repete seu prompt dentro de uma frase "
+"fixa. Isso mantém todos os exemplos destas páginas reproduzíveis. O que "
+"importa aqui é a estrutura da resposta."
+
+#: ../../quickstart.md:70
+msgid "`id`"
+msgstr "`id`"
+
+#: ../../quickstart.md:71
+msgid ""
+"A unique ID for this generation. Log it if you need to refer to the "
+"generation later."
+msgstr ""
+"Um ID exclusivo para esta geração. Registre-o nos logs se precisar "
+"referenciar essa geração posteriormente."
+
+#: ../../quickstart.md:73
+msgid "`model`"
+msgstr "`model`"
+
+#: ../../quickstart.md:74
+msgid "The model that handled the request."
+msgstr "O modelo que processou a requisição."
+
+#: ../../quickstart.md:76
+msgid "`language`"
+msgstr "`language`"
+
+#: ../../quickstart.md:77
+msgid "The language code you sent. If you leave it out, it defaults to `en`."
+msgstr ""
+"O código de idioma que você enviou. Se você não o informar, o padrão será `en`."
+
+#: ../../quickstart.md:79
+msgid "`output`"
+msgstr "`output`"
+
+#: ../../quickstart.md:80
+msgid "The generated text."
+msgstr "O texto gerado."
+
+#: ../../quickstart.md:82
+msgid "`finish_reason`"
+msgstr "`finish_reason`"
+
+#: ../../quickstart.md:83
+msgid ""
+"Why the response ended. `stop` means it finished naturally. `length` "
+"means it hit your `max_tokens` limit and was cut off."
+msgstr ""
+"O motivo pelo qual a resposta terminou. `stop` significa que ela terminou "
+"naturalmente. `length` significa que atingiu seu limite `max_tokens` e "
+"foi interrompida."
+
+#: ../../quickstart.md:85
+msgid "`usage`"
+msgstr "`usage`"
+
+#: ../../quickstart.md:86
+msgid ""
+"How many tokens the request used. `total_tokens` is `prompt_tokens` plus "
+"`completion_tokens`. See [Tokens and languages](tokens.md) for how tokens"
+" are counted."
+msgstr ""
+"Quantos tokens a requisição utilizou. `total_tokens` é `prompt_tokens` "
+"mais `completion_tokens`. Consulte [Tokens and languages](tokens.md) "
+"para saber como os tokens são contabilizados."
+
+#: ../../quickstart.md:88
+msgid "When the response is cut off"
+msgstr "Quando a resposta é interrompida"
+
+#: ../../quickstart.md:90
+msgid ""
+"Set `max_tokens` to 10 and send the same prompt. The output stops early "
+"and `finish_reason` changes to `length`."
+msgstr ""
+"Defina `max_tokens` como 10 e envie o mesmo prompt. A saída será encerrada "
+"mais cedo e `finish_reason` mudará para `length`."
+
+#: ../../quickstart.md:107
+msgid ""
+"If you see `length` and you expected a full answer, raise `max_tokens`. "
+"Each model has its own ceiling, listed under `max_output_tokens` in the "
+"[model list](#choose-a-model-and-language)."
+msgstr ""
+"Se você vir `length` e esperava uma resposta completa, aumente "
+"`max_tokens`. Cada modelo tem seu próprio limite máximo, listado em "
+"`max_output_tokens` na [lista de modelos](#choose-a-model-and-language)."
+
+#: ../../quickstart.md:109
+msgid "Response headers"
+msgstr "Cabeçalhos da resposta"
+
+#: ../../quickstart.md:111
+msgid "Every response carries headers worth knowing about."
+msgstr "Toda resposta contém cabeçalhos que vale a pena conhecer."
+
+#: ../../quickstart.md:43
+msgid "Header"
+msgstr "Cabeçalho"
+
+#: ../../quickstart.md:43
+msgid "Meaning"
+msgstr "Significado"
+
+#: ../../quickstart.md:43
+msgid "`X-Request-ID`"
+msgstr "`X-Request-ID`"
+
+#: ../../quickstart.md:43
+msgid "Unique ID for this request. Quote it when you contact support."
+msgstr ""
+"ID exclusivo desta requisição. Informe-o quando entrar em contato com o suporte."
+
+#: ../../quickstart.md:43
+msgid "`X-Data-Region`"
+msgstr "`X-Data-Region`"
+
+#: ../../quickstart.md:43
+msgid "The region that processed the request. Only on `/v1/generate`."
+msgstr ""
+"A região que processou a requisição. Disponível apenas em `/v1/generate`."
+
+#: ../../quickstart.md:43
+msgid "`X-RateLimit-Limit`"
+msgstr "`X-RateLimit-Limit`"
+
+#: ../../quickstart.md:43
+msgid "How many requests you get per minute."
+msgstr "Quantas requisições você pode fazer por minuto."
+
+#: ../../quickstart.md:43
+msgid "`X-RateLimit-Remaining`"
+msgstr "`X-RateLimit-Remaining`"
+
+#: ../../quickstart.md:43
+msgid "How many you have left in the current minute."
+msgstr "Quantas requisições você ainda tem na minuto atual."
+
+#: ../../quickstart.md:43
+msgid "`X-RateLimit-Reset`"
+msgstr "`X-RateLimit-Reset`"
+
+#: ../../quickstart.md:43
+msgid "Seconds until the counter resets."
+msgstr "Segundos até o contador ser redefinido."
+
+#: ../../quickstart.md:121
+msgid "Choose a model and language"
+msgstr "Escolha um modelo e um idioma"
+
+#: ../../quickstart.md:123
+msgid "List the models to see which languages each one accepts."
+msgstr ""
+"Liste os modelos para ver quais idiomas cada um aceita."
+
+#: ../../quickstart.md:146
+msgid ""
+"The language codes are `en` English, `sw` Swahili, `ha` Hausa, `yo` "
+"Yoruba, `lg` Luganda and `am` Amharic. If you send a language the model "
+"does not support, you get an `unsupported_language` error that lists the "
+"ones it does. See [Errors](errors.md)."
+msgstr ""
+"Os códigos de idioma são `en` inglês, `sw` suaíli, `ha` hauçá, `yo` "
+"iorubá, `lg` luganda e `am` amárico. Se você enviar um idioma que o "
+"modelo não oferece suporte, receberá um erro `unsupported_language` "
+"que lista os idiomas aceitos. Consulte [Errors](errors.md)."
+
+#: ../../quickstart.md:148
+msgid "Choose a region"
+msgstr "Escolha uma região"
+
+#: ../../quickstart.md:150
+msgid ""
+"The `region` parameter tells the service where to process your request. "
+"Use `ke` for Kenya, `ug` for Uganda, `ma` for Morocco or `mu` for "
+"Mauritius. If you leave it out, the default is `ke`. The `X-Data-Region` "
+"response header confirms where the request ran."
+msgstr ""
+"O parâmetro `region` informa ao serviço onde processar sua requisição. "
+"Use `ke` para o Quênia, `ug` para Uganda, `ma` para Marrocos ou `mu` "
+"para Maurício. Se você não o informar, o padrão será `ke`. O cabeçalho "
+"de resposta `X-Data-Region` confirma onde a requisição foi executada."
+
+#: ../../quickstart.md:152
+msgid "Next steps"
+msgstr "Próximos passos"
+
+#: ../../quickstart.md:154
+msgid "[Authentication](authentication.md) explains keys in more detail."
+msgstr "[Authentication](authentication.md) explica as chaves em mais detalhes."
+
+#: ../../quickstart.md:155
+msgid "[Errors](errors.md) covers every error and which ones to retry."
+msgstr "[Errors](errors.md) aborda todos os erros e quais devem ser repetidos."
+
+#: ../../quickstart.md:156
+msgid "[Production checklist](production.md) is what to review before you ship."
+msgstr ""
+"[Production checklist](production.md) mostra o que revisar antes de publicar."

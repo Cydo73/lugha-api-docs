@@ -1,0 +1,163 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Mumpe Cydrone
+# This file is distributed under the same license as the Lugha Reference API
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lugha Reference API \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: sw\n"
+"Language-Team: sw <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../production.md:1
+msgid "Production checklist"
+msgstr "Orodha ya ukaguzi wa production"
+
+#: ../../production.md:3
+msgid ""
+"Work through this list before you ship. Each item comes from something "
+"that goes wrong in real integrations."
+msgstr ""
+"Pitia orodha hii kabla ya kupeleka huduma production. Kila kipengele "
+"kinatokana na jambo ambalo linaweza kwenda vibaya katika integrations halisi."
+
+#: ../../production.md:5
+msgid "Before you deploy"
+msgstr "Kabla ya ku-deploy"
+
+#: ../../production.md:7
+msgid ""
+"Store API keys in environment variables or a secrets manager, never in "
+"source code."
+msgstr ""
+"Hifadhi API keys kwenye environment variables au secrets manager, kamwe "
+"si kwenye source code."
+
+#: ../../production.md:8
+msgid ""
+"Never expose a key in a browser or mobile app. Call the API from your own"
+" server."
+msgstr ""
+"Usiwahi kuweka key wazi kwenye browser au mobile app. Ita API kutoka "
+"kwenye server yako mwenyewe."
+
+#: ../../production.md:9
+msgid ""
+"Set a timeout on every request. Without one, a stalled connection can "
+"hang your application."
+msgstr ""
+"Weka timeout kwenye kila request. Bila timeout, connection iliyokwama "
+"inaweza kusimamisha application yako."
+
+#: ../../production.md:10
+msgid ""
+"Retry `429` and `500` responses and network failures. Do not retry other "
+"`4xx` errors."
+msgstr ""
+"Jaribu tena responses za `429` na `500` pamoja na network failures. "
+"Usijaribu tena errors nyingine za `4xx`."
+
+#: ../../production.md:11
+msgid ""
+"Wait for `Retry-After` on a `429`, and use exponential backoff with a "
+"little random jitter for everything else."
+msgstr ""
+"Subiri `Retry-After` kwenye `429`, na tumia exponential backoff pamoja "
+"na random jitter kidogo kwa kila kitu kingine."
+
+#: ../../production.md:12
+msgid "Log the `request_id` of every failed request so support can find it."
+msgstr ""
+"Hifadhi kwenye log `request_id` ya kila request iliyoshindwa ili support "
+"iweze kuipata."
+
+#: ../../production.md:13
+msgid "Do not log prompts or responses. They may contain personal data."
+msgstr ""
+"Usihifadhi prompts au responses kwenye log. Zinaweza kuwa na data ya kibinafsi."
+
+#: ../../production.md:14
+msgid "Check `finish_reason`. A value of `length` means the response was cut off."
+msgstr ""
+"Angalia `finish_reason`. Thamani ya `length` inamaanisha response "
+"ilikatizwa."
+
+#: ../../production.md:15
+msgid "Record `usage.total_tokens` so you can see how much each feature uses."
+msgstr ""
+"Hifadhi `usage.total_tokens` ili uweze kuona kila feature inatumia kiasi gani."
+
+#: ../../production.md:16
+msgid ""
+"Choose the `region` on purpose and confirm the `X-Data-Region` header "
+"matches what you expect."
+msgstr ""
+"Chagua `region` kwa makusudi na uthibitishe kuwa header ya "
+"`X-Data-Region` inalingana na unachotarajia."
+
+#: ../../production.md:17
+msgid ""
+"Handle `model_not_found`. Do not assume a model ID will exist forever. "
+"List models at startup if you can."
+msgstr ""
+"Shughulikia `model_not_found`. Usidhani kuwa model ID itaendelea kuwepo "
+"milele. Orodhesha models wakati wa kuanza ikiwa unaweza."
+
+#: ../../production.md:18
+msgid "Monitor how long requests take, and alert when they get slower."
+msgstr ""
+"Fuatilia requests zinachukua muda gani, na toa alert zinapoanza kuwa polepole."
+
+#: ../../production.md:20
+msgid "A client that follows the list"
+msgstr "Client inayofuata orodha"
+
+#: ../../production.md:22
+msgid ""
+"The repository includes a small Python client that covers the timeout, "
+"retry, backoff and logging items. This is its request method."
+msgstr ""
+"Repository ina Python client ndogo inayoshughulikia timeout, retry, "
+"backoff na logging. Hii ndiyo request method yake."
+
+#: ../../production.md:29
+msgid "A few choices worth pointing out:"
+msgstr "Baadhi ya maamuzi yanayofaa kuangaziwa:"
+
+#: ../../production.md:31
+msgid ""
+"It gives up straight away if the server asks for a wait longer than "
+"`max_retry_wait`. A request that blocks for a minute is usually worse "
+"than a clear failure."
+msgstr ""
+"Inakata mara moja ikiwa server itaomba usubiri zaidi ya `max_retry_wait`. "
+"Request inayokwama kwa dakika moja kwa kawaida ni mbaya zaidi kuliko "
+"failure iliyo wazi."
+
+#: ../../production.md:32
+msgid ""
+"It logs the status, error type and request ID. It never logs the prompt "
+"or the response."
+msgstr ""
+"Inahifadhi status, error type na request ID kwenye log. Haihifadhi prompt "
+"au response kwenye log kamwe."
+
+#: ../../production.md:33
+msgid ""
+"It only retries statuses in `RETRYABLE_STATUS`. A `400` will not succeed "
+"on a second attempt, so the client raises it at once."
+msgstr ""
+"Inajaribu tena statuses zilizo kwenye `RETRYABLE_STATUS` pekee. `400` "
+"haitafanikiwa kwenye jaribio la pili, kwa hiyo client inatoa error hiyo "
+"mara moja."
