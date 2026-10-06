@@ -21,21 +21,44 @@ The interesting part is the docs. The service exists so the docs can be honest.
 
 ## Run it locally
 
+macOS and Linux:
+
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements-dev.txt
 uvicorn app.main:app --reload
 ```
 
+Windows PowerShell:
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements-dev.txt
+uvicorn app.main:app --reload
+```
+
+If activation fails with "running scripts is disabled on this system", run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned` and try again.
+
 The service starts on `http://localhost:8000`. Interactive API pages are at `/docs`.
 
-Try it with the public demo key:
+Open a second terminal and try it with the public demo key.
+
+macOS and Linux:
 
 ```bash
 export LUGHA_API_KEY="lugha_demo_key"
 export LUGHA_BASE_URL="http://localhost:8000"
 bash examples/curl/quickstart.sh
+```
+
+Windows PowerShell:
+
+```powershell
+$env:LUGHA_API_KEY = "lugha_demo_key"
+$env:LUGHA_BASE_URL = "http://localhost:8000"
+.\examples\powershell\quickstart.ps1
 ```
 
 ## Run the tests
@@ -57,9 +80,11 @@ Open `docs/_build/html/index.html` in a browser. The `-W` flag turns any warning
 
 ## Deploy
 
+The documentation runs the service locally, so you only need this section if you want a public demo.
+
 1. Push this repository to GitHub.
 2. On Render, create a new Blueprint from the repository. It reads `render.yaml` and starts the service. Check that the service URL matches the one in `render.yaml`, and update it if not.
-3. Replace `https://YOUR-SERVICE.onrender.com` in `docs/quickstart.md` with your real service URL.
+3. Optional: add your service URL to `docs/quickstart.md` as a hosted alternative. Free Render services sleep when idle, so mention that the first request can take up to a minute.
 4. On Read the Docs, import the repository. It reads `.readthedocs.yaml` and builds the docs.
 
 ## Checks in CI

@@ -1,5 +1,7 @@
 # Lugha Reference API
 
+Source code: [Lugha on GitHub](https://github.com/Cydo73/lugha-api-docs)
+
 Lugha is a small text generation API that supports African languages. Use it to generate text, count tokens before you send a request, and choose the region that processes your data.
 
 ```{admonition} Independent documentation exercise

@@ -2,26 +2,101 @@
 
 Make your first request and read the response in about five minutes.
 
-You need one of these on your machine: `curl`, Python 3.9 or later with the `requests` package, or Node.js 18 or later. Nothing else to install.
+To run the service you need Git and Python 3.9 or later. To send requests you need one of these: curl, PowerShell (built into Windows), Python with the `requests` package, or Node.js 18 or later.
 
-## 1. Set your environment
+## 1. Start the service
 
-Your API key and the server address live in environment variables, so they never end up in your code.
+Lugha is a small service that runs on your own computer, so you can follow every example without signing up for anything. Open a terminal and run these commands. Pick the tab for your system.
 
-The demo key below is public. It is limited to 10 requests per minute.
+::::{tab-set}
 
+:::{tab-item} macOS and Linux
+:sync: unix
 ```bash
-export LUGHA_API_KEY="lugha_demo_key"
-export LUGHA_BASE_URL="https://YOUR-SERVICE.onrender.com"
+git clone https://github.com/Cydo73/lugha-api-docs.git
+cd lugha-api-docs
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app
+```
+:::
+
+:::{tab-item} Windows PowerShell
+:sync: windows
+```powershell
+git clone https://github.com/Cydo73/lugha-api-docs.git
+cd lugha-api-docs
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+uvicorn app.main:app
 ```
 
 ```{note}
-If the demo server has been idle, the first request can take up to a minute to respond. Later requests are fast.
+If activation fails with "running scripts is disabled on this system", run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned` and activate again. The change only lasts for this window.
+```
+:::
+
+::::
+
+When the service is ready, the terminal prints a line that ends with `Uvicorn running on http://127.0.0.1:8000`. Leave this window open, because the service stops when you close it. Open a second terminal window for the rest of this page.
+
+Check that the service is running:
+
+::::{tab-set}
+
+:::{tab-item} macOS and Linux
+:sync: unix
+```bash
+curl http://localhost:8000/health
+```
+:::
+
+:::{tab-item} Windows PowerShell
+:sync: windows
+```powershell
+Invoke-RestMethod http://localhost:8000/health | ConvertTo-Json -Compress
+```
+:::
+
+::::
+
+You should see `{"status":"ok"}`.
+
+## 2. Set your environment
+
+Your API key and the server address live in environment variables, so they never end up in your code. Run these in your second terminal window.
+
+The demo key below is public. It is limited to 10 requests per minute.
+
+::::{tab-set}
+
+:::{tab-item} macOS and Linux
+:sync: unix
+```bash
+export LUGHA_API_KEY="lugha_demo_key"
+export LUGHA_BASE_URL="http://localhost:8000"
+```
+:::
+
+:::{tab-item} Windows PowerShell
+:sync: windows
+```powershell
+$env:LUGHA_API_KEY = "lugha_demo_key"
+$env:LUGHA_BASE_URL = "http://localhost:8000"
+```
+:::
+
+::::
+
+```{note}
+These settings last only for the window where you ran them. If you open a new window, set them again.
 ```
 
-## 2. Send your first request
+## 3. Send your first request
 
-Ask the large model a question. Pick the tab for your language.
+Ask the large model a question. Each example is a file in the `examples` folder of the repository you cloned. In your second window, go to the repository folder, then paste the code or run the file. Pick the tab for your language.
 
 ::::{tab-set}
 
@@ -30,11 +105,36 @@ Ask the large model a question. Pick the tab for your language.
 :language: bash
 :lines: 4-
 ```
+
+Or run the file:
+
+```bash
+bash examples/curl/quickstart.sh
+```
+:::
+
+:::{tab-item} PowerShell
+```{literalinclude} ../examples/powershell/quickstart.ps1
+:language: powershell
+```
+
+Or run the file:
+
+```powershell
+.\examples\powershell\quickstart.ps1
+```
 :::
 
 :::{tab-item} Python
 ```{literalinclude} ../examples/python/quickstart.py
 :language: python
+```
+
+Install the `requests` package once, then run the file. Use `python` on Windows and `python3` on macOS and Linux.
+
+```bash
+pip install requests
+python3 examples/python/quickstart.py
 ```
 :::
 
@@ -42,11 +142,17 @@ Ask the large model a question. Pick the tab for your language.
 ```{literalinclude} ../examples/javascript/quickstart.mjs
 :language: javascript
 ```
+
+Run the file:
+
+```bash
+node examples/javascript/quickstart.mjs
+```
 :::
 
 ::::
 
-## 3. Read the response
+## 4. Read the response
 
 A successful request returns status `200` and a JSON body like this. Your `id` will differ.
 
@@ -122,9 +228,23 @@ Every response carries headers worth knowing about.
 
 List the models to see which languages each one accepts.
 
+::::{tab-set}
+
+:::{tab-item} macOS and Linux
+:sync: unix
 ```bash
 curl "$LUGHA_BASE_URL/v1/models" -H "Authorization: Bearer $LUGHA_API_KEY"
 ```
+:::
+
+:::{tab-item} Windows PowerShell
+:sync: windows
+```powershell
+Invoke-RestMethod "$env:LUGHA_BASE_URL/v1/models" -Headers @{ Authorization = "Bearer $env:LUGHA_API_KEY" } | ConvertTo-Json -Depth 5
+```
+:::
+
+::::
 
 ```json
 {
